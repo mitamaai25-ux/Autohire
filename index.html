@@ -61,69 +61,93 @@
       </section>
 
       <section id="services" class="section container">
-        <h2 class="reveal">Services</h2>
+        <h2 class="reveal">Services provided</h2>
         <p class="reveal">Choose a service tab to view details and book a reservation for your project.</p>
 
         <div class="service-tabs reveal" role="tablist" aria-label="Service tabs">
-          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="content-writing">Content Writing</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="blog-writing">Blog Writing</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="web-designing">Web Designing</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="logo-designing">Logo Designing</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="book-cover-designing">Book Cover Designing</button>
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="website-design-dev">Website Designing & Developing</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="logo-design">Logo Design</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="writing">Writing</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="resume-writing">Resume Writing</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="ghostwriting">Ghostwriting</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="technical-writing">Technical Writing</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="translation">Translation</button>
         </div>
 
         <div class="tab-panels">
-          <article class="tab-panel card glass reveal active" id="content-writing" role="tabpanel">
-            <h3>Content Writing</h3>
-            <p>Professional brand and website content crafted to communicate your value clearly and convert visitors into customers.</p>
-            <form class="reservation-form contact-form" data-service="Content Writing">
+          <article class="tab-panel card glass reveal active" id="website-design-dev" role="tabpanel">
+            <h3>Website Designing & Developing</h3>
+            <p>End-to-end website planning, UI design, and development for modern, high-performing business websites.</p>
+            <form class="reservation-form contact-form" data-service="Website Designing & Developing">
               <label>Client Name <input type="text" name="clientName" required /></label>
               <label>Email <input type="email" name="email" required /></label>
-              <label>Project Brief <textarea name="brief" rows="3" placeholder="Tell us what content you need" required></textarea></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share your website goals and required pages" required></textarea></label>
               <button class="btn btn-primary" type="submit">Book Reservation</button>
             </form>
           </article>
 
-          <article class="tab-panel card glass reveal" id="blog-writing" role="tabpanel">
-            <h3>Blog Writing</h3>
-            <p>SEO-focused and thought-leadership blog writing to increase visibility, audience trust, and inbound leads.</p>
-            <form class="reservation-form contact-form" data-service="Blog Writing">
+          <article class="tab-panel card glass reveal" id="logo-design" role="tabpanel">
+            <h3>Logo Design</h3>
+            <p>Memorable and brand-aligned logo concepts designed for digital and print consistency.</p>
+            <form class="reservation-form contact-form" data-service="Logo Design">
               <label>Client Name <input type="text" name="clientName" required /></label>
               <label>Email <input type="email" name="email" required /></label>
-              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share topics, tone, and frequency" required></textarea></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share your brand style, audience, and preferences" required></textarea></label>
               <button class="btn btn-primary" type="submit">Book Reservation</button>
             </form>
           </article>
 
-          <article class="tab-panel card glass reveal" id="web-designing" role="tabpanel">
-            <h3>Web Designing</h3>
-            <p>Modern, responsive website design focused on user experience, conversion flow, and brand storytelling.</p>
-            <form class="reservation-form contact-form" data-service="Web Designing">
+          <article class="tab-panel card glass reveal" id="writing" role="tabpanel">
+            <h3>Writing</h3>
+            <p>Professional writing support for business, marketing, website, and creative communication needs.</p>
+            <form class="reservation-form contact-form" data-service="Writing">
               <label>Client Name <input type="text" name="clientName" required /></label>
               <label>Email <input type="email" name="email" required /></label>
-              <label>Project Brief <textarea name="brief" rows="3" placeholder="Describe your website goals and pages" required></textarea></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Tell us what type of writing you need" required></textarea></label>
               <button class="btn btn-primary" type="submit">Book Reservation</button>
             </form>
           </article>
 
-          <article class="tab-panel card glass reveal" id="logo-designing" role="tabpanel">
-            <h3>Logo Designing</h3>
-            <p>Distinct logo concepts with scalable assets and brand-safe visual systems for digital and print use.</p>
-            <form class="reservation-form contact-form" data-service="Logo Designing">
+          <article class="tab-panel card glass reveal" id="resume-writing" role="tabpanel">
+            <h3>Resume Writing</h3>
+            <p>ATS-friendly and professionally written resumes tailored to roles, industries, and seniority levels.</p>
+            <form class="reservation-form contact-form" data-service="Resume Writing">
               <label>Client Name <input type="text" name="clientName" required /></label>
               <label>Email <input type="email" name="email" required /></label>
-              <label>Project Brief <textarea name="brief" rows="3" placeholder="Describe your brand style and audience" required></textarea></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share your target role and experience summary" required></textarea></label>
               <button class="btn btn-primary" type="submit">Book Reservation</button>
             </form>
           </article>
 
-          <article class="tab-panel card glass reveal" id="book-cover-designing" role="tabpanel">
-            <h3>Book Cover Designing</h3>
-            <p>High-impact book cover designs aligned with genre conventions and optimized for both digital and print storefronts.</p>
-            <form class="reservation-form contact-form" data-service="Book Cover Designing">
+          <article class="tab-panel card glass reveal" id="ghostwriting" role="tabpanel">
+            <h3>Ghostwriting</h3>
+            <p>Confidential ghostwriting services for books, thought leadership, blogs, and executive content.</p>
+            <form class="reservation-form contact-form" data-service="Ghostwriting">
               <label>Client Name <input type="text" name="clientName" required /></label>
               <label>Email <input type="email" name="email" required /></label>
-              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share title, genre, and creative direction" required></textarea></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share your topic, tone, and publishing goals" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Book Reservation</button>
+            </form>
+          </article>
+
+          <article class="tab-panel card glass reveal" id="technical-writing" role="tabpanel">
+            <h3>Technical Writing</h3>
+            <p>Clear and structured technical documentation, guides, manuals, and product knowledge content.</p>
+            <form class="reservation-form contact-form" data-service="Technical Writing">
+              <label>Client Name <input type="text" name="clientName" required /></label>
+              <label>Email <input type="email" name="email" required /></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Tell us what documentation or technical content you need" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Book Reservation</button>
+            </form>
+          </article>
+
+          <article class="tab-panel card glass reveal" id="translation" role="tabpanel">
+            <h3>Translation</h3>
+            <p>Accurate and context-aware translation services for business documents, websites, and content assets.</p>
+            <form class="reservation-form contact-form" data-service="Translation">
+              <label>Client Name <input type="text" name="clientName" required /></label>
+              <label>Email <input type="email" name="email" required /></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share source language, target language, and content type" required></textarea></label>
               <button class="btn btn-primary" type="submit">Book Reservation</button>
             </form>
           </article>
