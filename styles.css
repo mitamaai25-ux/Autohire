@@ -365,3 +365,66 @@ textarea {
 .faq-item p {
   margin-top: 0.7rem;
 }
+
+.admin-page h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 1rem 0 0.3rem;
+}
+
+.admin-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.project-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.service-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.tab-btn {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.tab-btn.active {
+  background: linear-gradient(120deg, var(--brand), var(--brand-2));
+  border-color: transparent;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panels {
+  margin-top: 0.5rem;
+}
+
+.reservation-status {
+  margin-top: 0.8rem;
+  color: #d8e1ff;
+}

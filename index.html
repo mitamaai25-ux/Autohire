@@ -30,6 +30,7 @@
           <a href="#services">Services</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#faq">FAQ</a>
+          <a href="admin.html">Admin</a>
           <a href="#contact" class="btn btn-outline">Contact</a>
         </div>
       </nav>
@@ -62,38 +63,73 @@
 
       <section id="services" class="section container">
         <h2 class="reveal">Services</h2>
-        <div class="services-grid">
-          <article class="card glass reveal">
-            <div class="icon">⚙️</div>
-            <h3>AI Automation Solutions</h3>
-            <p>Automate repetitive workflows with reliable AI agents that improve speed and accuracy.</p>
+        <p class="reveal">Choose a service tab to view details and book a reservation for your project.</p>
+
+        <div class="service-tabs reveal" role="tablist" aria-label="Service tabs">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="content-writing">Content Writing</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="blog-writing">Blog Writing</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="web-designing">Web Designing</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="logo-designing">Logo Designing</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="book-cover-designing">Book Cover Designing</button>
+        </div>
+
+        <div class="tab-panels">
+          <article class="tab-panel card glass reveal active" id="content-writing" role="tabpanel">
+            <h3>Content Writing</h3>
+            <p>Professional brand and website content crafted to communicate your value clearly and convert visitors into customers.</p>
+            <form class="reservation-form contact-form" data-service="Content Writing">
+              <label>Client Name <input type="text" name="clientName" required /></label>
+              <label>Email <input type="email" name="email" required /></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Tell us what content you need" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Book Reservation</button>
+            </form>
           </article>
-          <article class="card glass reveal">
-            <div class="icon">🧠</div>
-            <h3>Machine Learning Model Development</h3>
-            <p>Build custom ML models tailored to your business data, use-cases, and performance goals.</p>
+
+          <article class="tab-panel card glass reveal" id="blog-writing" role="tabpanel">
+            <h3>Blog Writing</h3>
+            <p>SEO-focused and thought-leadership blog writing to increase visibility, audience trust, and inbound leads.</p>
+            <form class="reservation-form contact-form" data-service="Blog Writing">
+              <label>Client Name <input type="text" name="clientName" required /></label>
+              <label>Email <input type="email" name="email" required /></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share topics, tone, and frequency" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Book Reservation</button>
+            </form>
           </article>
-          <article class="card glass reveal">
-            <div class="icon">🔄</div>
-            <h3>Intelligent Process Optimization</h3>
-            <p>Redesign operational pipelines using AI insights to reduce cost, delays, and inefficiencies.</p>
+
+          <article class="tab-panel card glass reveal" id="web-designing" role="tabpanel">
+            <h3>Web Designing</h3>
+            <p>Modern, responsive website design focused on user experience, conversion flow, and brand storytelling.</p>
+            <form class="reservation-form contact-form" data-service="Web Designing">
+              <label>Client Name <input type="text" name="clientName" required /></label>
+              <label>Email <input type="email" name="email" required /></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Describe your website goals and pages" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Book Reservation</button>
+            </form>
           </article>
-          <article class="card glass reveal">
-            <div class="icon">🧭</div>
-            <h3>AI Consulting & Strategy</h3>
-            <p>Define your AI roadmap with clear architecture, governance, and adoption strategies.</p>
+
+          <article class="tab-panel card glass reveal" id="logo-designing" role="tabpanel">
+            <h3>Logo Designing</h3>
+            <p>Distinct logo concepts with scalable assets and brand-safe visual systems for digital and print use.</p>
+            <form class="reservation-form contact-form" data-service="Logo Designing">
+              <label>Client Name <input type="text" name="clientName" required /></label>
+              <label>Email <input type="email" name="email" required /></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Describe your brand style and audience" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Book Reservation</button>
+            </form>
           </article>
-          <article class="card glass reveal">
-            <div class="icon">💻</div>
-            <h3>Custom AI Software Development</h3>
-            <p>Engineer production-ready AI applications integrated seamlessly into your existing systems.</p>
-          </article>
-          <article class="card glass reveal">
-            <div class="icon">📊</div>
-            <h3>Data Analytics & Insights</h3>
-            <p>Turn complex data into actionable insights with real-time dashboards and predictive analytics.</p>
+
+          <article class="tab-panel card glass reveal" id="book-cover-designing" role="tabpanel">
+            <h3>Book Cover Designing</h3>
+            <p>High-impact book cover designs aligned with genre conventions and optimized for both digital and print storefronts.</p>
+            <form class="reservation-form contact-form" data-service="Book Cover Designing">
+              <label>Client Name <input type="text" name="clientName" required /></label>
+              <label>Email <input type="email" name="email" required /></label>
+              <label>Project Brief <textarea name="brief" rows="3" placeholder="Share title, genre, and creative direction" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Book Reservation</button>
+            </form>
           </article>
         </div>
+        <p id="reservationStatus" class="reservation-status" aria-live="polite"></p>
       </section>
 
       <section class="section alt" id="why">
