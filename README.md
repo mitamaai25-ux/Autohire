@@ -18,7 +18,7 @@ AutoHiree is a professional AI-built website concept that combines the best expe
 ## Current Prototype Features
 - Featured jobs marketplace cards.
 - Professional activity feed and career graph insights.
-- Three connected dashboards on the main page: Onboarding, Client, and Freelancer.
+- Connected dashboards on the main page: Onboarding and Client, with a dedicated Freelancer page.
 - Talent profile showcase section.
 - Company hiring request form and talent network signup form.
 - Admin-managed project sync on the homepage.
