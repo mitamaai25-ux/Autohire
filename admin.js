@@ -3,6 +3,7 @@ const storageKeys = {
   projects: 'autohiree_admin_projects',
   loggedIn: 'autohiree_admin_logged_in',
   reservations: 'autohiree_reservations',
+  talentLeads: 'autohiree_talent_leads',
 };
 
 const registerForm = document.getElementById('registerForm');
@@ -13,10 +14,12 @@ const projectManager = document.getElementById('projectManager');
 const projectForm = document.getElementById('projectForm');
 const projectList = document.getElementById('projectList');
 const reservationList = document.getElementById('reservationList');
+const talentLeadList = document.getElementById('talentLeadList');
 
 const getUser = () => JSON.parse(localStorage.getItem(storageKeys.user) || 'null');
 const getProjects = () => JSON.parse(localStorage.getItem(storageKeys.projects) || '[]');
 const getReservations = () => JSON.parse(localStorage.getItem(storageKeys.reservations) || '[]');
+const getTalentLeads = () => JSON.parse(localStorage.getItem(storageKeys.talentLeads) || '[]');
 
 const renderProjects = () => {
   const projects = getProjects();
@@ -62,6 +65,37 @@ const renderReservations = () => {
     });
 };
 
+
+const renderTalentLeads = () => {
+  talentLeadList.innerHTML = '';
+  const talentLeads = getTalentLeads();
+
+  if (!talentLeads.length) {
+    const empty = document.createElement('li');
+    empty.className = 'feature';
+    empty.textContent = 'No talent applications yet.';
+    talentLeadList.appendChild(empty);
+    return;
+  }
+
+  talentLeads
+    .slice()
+    .reverse()
+    .forEach((lead) => {
+      const li = document.createElement('li');
+      li.className = 'case';
+      const submitted = new Date(lead.createdAt).toLocaleString();
+      li.innerHTML = `
+        <h3>${lead.role}</h3>
+        <p><strong>Name:</strong> ${lead.name}</p>
+        <p><strong>Email:</strong> ${lead.email}</p>
+        <p><strong>Summary:</strong> ${lead.summary}</p>
+        <p><strong>Submitted:</strong> ${submitted}</p>
+      `;
+      talentLeadList.appendChild(li);
+    });
+};
+
 const setLoggedInState = (isLoggedIn) => {
   localStorage.setItem(storageKeys.loggedIn, isLoggedIn ? 'true' : 'false');
   projectManager.classList.toggle('hidden', !isLoggedIn);
@@ -69,6 +103,7 @@ const setLoggedInState = (isLoggedIn) => {
   if (isLoggedIn) {
     renderProjects();
     renderReservations();
+    renderTalentLeads();
   }
 };
 

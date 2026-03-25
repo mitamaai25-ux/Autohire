@@ -1,6 +1,7 @@
 const storageKeys = {
   projects: 'autohiree_admin_projects',
   reservations: 'autohiree_reservations',
+  talentLeads: 'autohiree_talent_leads',
 };
 
 const reveals = document.querySelectorAll('.reveal');
@@ -8,14 +9,11 @@ if (reveals.length) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('in-view');
       });
     },
     { threshold: 0.15 }
   );
-
   reveals.forEach((el) => observer.observe(el));
 }
 
@@ -54,14 +52,28 @@ if (counters.length) {
   counters.forEach((counter) => counterObserver.observe(counter));
 }
 
-const getProjects = () => JSON.parse(localStorage.getItem(storageKeys.projects) || '[]');
+const feedItems = [
+  'NovaCloud hired a Senior DevOps Engineer in 36 hours using AI shortlisting.',
+  'DesignHub posted a project: Product Designer for Fintech onboarding revamp.',
+  'Elena Carter earned 3 new endorsements in AI product strategy this week.',
+  'Apex Retail is actively hiring freelance growth marketers across North America.',
+];
 
+const activityFeed = document.getElementById('activityFeed');
+if (activityFeed) {
+  feedItems.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    activityFeed.appendChild(li);
+  });
+}
+
+const getProjects = () => JSON.parse(localStorage.getItem(storageKeys.projects) || '[]');
 const featuredProjects = document.getElementById('featuredProjects');
 if (featuredProjects) {
   const projects = getProjects();
-
   if (!projects.length) {
-    featuredProjects.innerHTML = '<li class="feature">No community projects yet. Be the first to add one from admin.</li>';
+    featuredProjects.innerHTML = '<li class="feature">No community projects yet. Add one from admin portal.</li>';
   } else {
     projects
       .slice()
@@ -78,7 +90,6 @@ if (featuredProjects) {
 
 const contactForm = document.getElementById('contactForm');
 const reservationStatus = document.getElementById('reservationStatus');
-
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -96,12 +107,34 @@ if (contactForm) {
     reservations.push(reservation);
     localStorage.setItem(storageKeys.reservations, JSON.stringify(reservations));
 
-    reservationStatus.textContent = 'Thanks! Your consultation request was saved and sent to AutoHiree admin.';
+    reservationStatus.textContent = 'Success! We saved your hiring request and will send AI-matched talent suggestions.';
     contactForm.reset();
   });
 }
 
-const yearNode = document.getElementById('year');
-if (yearNode) {
-  yearNode.textContent = new Date().getFullYear();
+const talentApplyForm = document.getElementById('talentApplyForm');
+const talentStatus = document.getElementById('talentStatus');
+if (talentApplyForm) {
+  talentApplyForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(talentApplyForm);
+
+    const profile = {
+      name: String(formData.get('name')).trim(),
+      email: String(formData.get('email')).trim().toLowerCase(),
+      role: String(formData.get('role')).trim(),
+      summary: String(formData.get('summary')).trim(),
+      createdAt: new Date().toISOString(),
+    };
+
+    const talentLeads = JSON.parse(localStorage.getItem(storageKeys.talentLeads) || '[]');
+    talentLeads.push(profile);
+    localStorage.setItem(storageKeys.talentLeads, JSON.stringify(talentLeads));
+
+    talentStatus.textContent = 'Profile submitted! Your account is queued for network verification.';
+    talentApplyForm.reset();
+  });
 }
+
+const yearNode = document.getElementById('year');
+if (yearNode) yearNode.textContent = new Date().getFullYear();
