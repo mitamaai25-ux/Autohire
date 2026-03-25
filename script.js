@@ -52,6 +52,28 @@ if (counters.length) {
   counters.forEach((counter) => counterObserver.observe(counter));
 }
 
+
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+if (tabButtons.length && tabPanels.length) {
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const selected = button.dataset.tab;
+
+      tabButtons.forEach((btn) => {
+        const active = btn.dataset.tab === selected;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-selected', String(active));
+      });
+
+      tabPanels.forEach((panel) => {
+        panel.classList.toggle('active', panel.dataset.panel === selected);
+      });
+    });
+  });
+}
+
 const feedItems = [
   'NovaCloud hired a Senior DevOps Engineer in 36 hours using AI shortlisting.',
   'DesignHub posted a project: Product Designer for Fintech onboarding revamp.',
