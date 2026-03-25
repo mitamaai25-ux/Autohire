@@ -126,6 +126,8 @@ p { margin: 0; color: var(--muted); }
 .tab-panel.active {
   display: block;
 }
+.btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
 .tab-panel ul {
   margin: 0;
@@ -140,6 +142,9 @@ p { margin: 0; color: var(--muted); }
   gap: 1rem;
   margin-top: 0.8rem;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .freelancer-sidebar {
   border: 1px solid var(--line);
