@@ -10,6 +10,10 @@ AutoHiree is a professional AI-built website concept that combines the best expe
 ## Pages
 - `index.html`: Public product website for hiring teams and talent.
 - `about.html`: Dedicated About AutoHiree page with mission, problems solved, and core modules.
+- `freelancer-dashboard.html`: Dedicated freelancer dashboard page.
+- `client-dashboard.html`: Dedicated client dashboard page.
+- `get-started.html`: Dedicated onboarding/get started page.
+- `talent-network.html`: Dedicated talent network page.
 - `admin.html`: Local admin portal for login, lead tracking, and community project publishing.
 
 ## Current Prototype Features
