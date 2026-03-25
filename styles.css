@@ -179,6 +179,46 @@ input, textarea, select {
 }
 
 .footer { border-top: 1px solid var(--line); padding: 1rem 0; }
+
+.footer-mega {
+  background: #11100d;
+  border-top: 1px solid #282316;
+  padding: 3rem 0 1.2rem;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 2.2rem;
+}
+
+.footer-columns h4 {
+  margin: 0 0 0.8rem;
+  color: #a8a9b0;
+  font-weight: 600;
+}
+
+.footer-columns a {
+  display: block;
+  color: #f3f4f6;
+  text-decoration: none;
+  margin-bottom: 0.55rem;
+}
+
+.footer-columns a:hover {
+  color: #7dc0ff;
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  border-top: 1px solid #282316;
+  padding-top: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
 .footer-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
 .linkedin { display: inline-flex; gap: 0.4rem; align-items: center; color: #dbe4ff; text-decoration: none; }
 .linkedin-icon { width: 1.3rem; height: 1.3rem; border-radius: 0.25rem; display: grid; place-items: center; background: #2e8fff; color: #fff; font-size: 0.78rem; font-weight: 700; }
@@ -195,7 +235,8 @@ input, textarea, select {
 @media (max-width: 920px) {
   .network-layout,
   .dual-form-layout,
-  .dashboard-tabs {
+  .dashboard-tabs,
+  .footer-columns {
     grid-template-columns: 1fr;
   }
 }
