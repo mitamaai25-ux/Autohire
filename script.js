@@ -74,6 +74,40 @@ if (tabButtons.length && tabPanels.length) {
   });
 }
 
+
+const talentRows = document.querySelectorAll('#talentList li');
+const flowLines = document.querySelectorAll('.flow-line');
+const opsStatus = document.getElementById('opsStatus');
+const opsFit = document.getElementById('opsFit');
+const opsScore = document.getElementById('opsScore');
+
+const liveUpdates = [
+  { status: 'Reviewing freelancer readiness', fit: 'Noah Garcia — Growth Marketer', score: 91, line: 2, talent: 2 },
+  { status: 'Checking onboarding documents', fit: 'Ava Thompson — Product Designer', score: 88, line: 0, talent: 0 },
+  { status: 'Budget and timeline alignment', fit: 'Liam Chen — Full Stack Engineer', score: 93, line: 1, talent: 1 },
+  { status: 'Final availability confirmation', fit: 'Sara Khan — UX Writer', score: 86, line: 3, talent: 3 },
+  { status: 'Preparing proposal handoff', fit: 'Mia Lopez — Marketing Analyst', score: 89, line: 4, talent: 4 },
+];
+
+if (opsStatus && opsFit && opsScore && talentRows.length && flowLines.length) {
+  let index = 0;
+
+  const applyUpdate = () => {
+    const item = liveUpdates[index];
+    opsStatus.textContent = item.status;
+    opsFit.innerHTML = `Current best fit: <strong>${item.fit}</strong>`;
+    opsScore.textContent = `${item.score}%`;
+
+    talentRows.forEach((row, i) => row.classList.toggle('active', i === item.talent));
+    flowLines.forEach((line, i) => line.classList.toggle('active', i === item.line));
+
+    index = (index + 1) % liveUpdates.length;
+  };
+
+  applyUpdate();
+  setInterval(applyUpdate, 2600);
+}
+
 const feedItems = [
   'NovaCloud hired a Senior DevOps Engineer in 36 hours using AI shortlisting.',
   'DesignHub posted a project: Product Designer for Fintech onboarding revamp.',
