@@ -66,11 +66,15 @@ p { margin: 0; color: var(--muted); }
 .apply-button {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .apply-button:hover {
   transform: scale(1.05);
   background-color: #0056b3;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .card, .case, .feature, .contact-info {
   background: linear-gradient(150deg, rgba(28, 40, 80, 0.72), rgba(12, 18, 38, 0.66));
@@ -116,6 +120,8 @@ p { margin: 0; color: var(--muted); }
 .ops-card {
   border-color: #3c5f8d;
 }
+.btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
 .flow-canvas {
   margin-top: 0.7rem;
@@ -126,6 +132,7 @@ p { margin: 0; color: var(--muted); }
   background: radial-gradient(circle at 50% 50%, rgba(67, 108, 207, 0.35), rgba(9, 20, 47, 0.95));
   overflow: hidden;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .talent-list {
   list-style: none;
@@ -142,6 +149,9 @@ p { margin: 0; color: var(--muted); }
   padding: 0.35rem 0.7rem;
   color: #bed3ff;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .talent-list li.active {
   border-color: #70c9ff;
@@ -235,6 +245,8 @@ p { margin: 0; color: var(--muted); }
   cursor: pointer;
   font-weight: 600;
 }
+.btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
 .tab-btn.active {
   border-color: transparent;
@@ -247,6 +259,9 @@ p { margin: 0; color: var(--muted); }
   border-radius: 1rem;
   overflow: hidden;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .tab-panel {
   display: none;
@@ -264,8 +279,6 @@ p { margin: 0; color: var(--muted); }
   padding-left: 1.1rem;
   color: var(--muted);
 }
-
-
 
 .dashboard-shell {
   background: radial-gradient(circle at 40% 50%, #101b46, #081234 72%);
