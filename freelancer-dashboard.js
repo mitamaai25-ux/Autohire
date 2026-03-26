@@ -115,7 +115,7 @@ const renderBrowseProjects = () => {
   sampleBrowseProjects.forEach((project) => {
     const li = document.createElement('li');
     li.className = 'case';
-    li.innerHTML = `<h3>${project.title}</h3><p><strong>Budget:</strong> ${project.budget}</p><button class="btn btn-outline" data-proposal-id="${project.id}">Submit Proposal</button>`;
+    li.innerHTML = `<h3>${project.title}</h3><p><strong>Budget:</strong> ${project.budget}</p><button class="btn apply-button btn-outline" data-proposal-id="${project.id}">Submit Proposal</button>`;
     browseProjects.appendChild(li);
   });
 };

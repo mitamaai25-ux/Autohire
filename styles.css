@@ -62,6 +62,20 @@ p { margin: 0; color: var(--muted); }
 .btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
 .btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
+
+.apply-button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.glass { backdrop-filter: blur(6px); }
+
+.apply-button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
+
 .card, .case, .feature, .contact-info {
   background: linear-gradient(150deg, rgba(28, 40, 80, 0.72), rgba(12, 18, 38, 0.66));
   border: 1px solid var(--line);
