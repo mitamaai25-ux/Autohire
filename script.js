@@ -153,6 +153,25 @@ if (featuredProjects) {
   }
 }
 
+
+const jobSearchForm = document.getElementById('jobSearchForm');
+const searchBar = document.getElementById('search-bar');
+const jobCards = document.querySelectorAll('#jobGrid .job-card');
+
+if (jobSearchForm && searchBar && jobCards.length) {
+  jobSearchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const term = searchBar.value.trim().toLowerCase();
+
+    jobCards.forEach((card) => {
+      const title = String(card.dataset.title || '').toLowerCase();
+      const meta = String(card.dataset.meta || '').toLowerCase();
+      const show = !term || title.includes(term) || meta.includes(term);
+      card.style.display = show ? '' : 'none';
+    });
+  });
+}
+
 const contactForm = document.getElementById('contactForm');
 const reservationStatus = document.getElementById('reservationStatus');
 if (contactForm) {

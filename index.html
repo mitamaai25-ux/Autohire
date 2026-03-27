@@ -163,24 +163,32 @@
 
       <section id="marketplace" class="section container">
         <h2 class="reveal">Upwork-Style Jobs Marketplace</h2>
-        <div class="job-grid">
-          <article class="card reveal animate-slide-up delay-1">
-            <p class="pill">Featured Remote Contract</p>
-            <h3>Senior Full-Stack Engineer (SaaS)</h3>
-            <p>$65–$90/hr • 6 months • US/Europe overlap</p>
-            <p>Build a multi-tenant analytics dashboard with React, Node.js, and AI copilots.</p>
+
+        <form class="search-form reveal" id="jobSearchForm">
+          <input type="text" placeholder="Search jobs..." id="search-bar" class="search-textbox" />
+          <button type="submit" class="search-button apply-button">Search</button>
+        </form>
+
+        <div class="job-grid" id="jobGrid">
+          <article class="job-card reveal animate-slide-up delay-1" data-title="Senior Full-Stack Engineer" data-meta="SaaS | Remote">
+            <h3>Senior Full-Stack Engineer</h3>
+            <p>NovaCloud | Remote (US/Europe overlap)</p>
+            <p>$65–$90/hr • 6 months</p>
+            <button class="apply-btn apply-button">Apply Now</button>
           </article>
-          <article class="card reveal animate-slide-up delay-2">
-            <p class="pill">Featured Full-Time</p>
+
+          <article class="job-card reveal animate-slide-up delay-2" data-title="Head of Growth Marketing" data-meta="Fintech | Hybrid">
             <h3>Head of Growth Marketing</h3>
-            <p>$120k–$150k • Hybrid • B2B Fintech</p>
-            <p>Own inbound engine, performance strategy, and funnel optimization across channels.</p>
+            <p>FinEdge | Hybrid • New York</p>
+            <p>$120k–$150k • Full-Time</p>
+            <button class="apply-btn apply-button">Apply Now</button>
           </article>
-          <article class="card reveal animate-slide-up">
-            <p class="pill">Featured Project</p>
-            <h3>UX Designer for Mobile App Redesign</h3>
-            <p>Fixed Price • 8-week sprint • Immediate start</p>
-            <p>Redesign onboarding and conversion flow for a subscription-based wellness app.</p>
+
+          <article class="job-card reveal animate-slide-up" data-title="UX Designer" data-meta="Mobile | Contract">
+            <h3>UX Designer</h3>
+            <p>Wellnest App | Remote</p>
+            <p>Fixed Price • 8-week sprint</p>
+            <button class="apply-btn apply-button">Apply Now</button>
           </article>
         </div>
       </section>
@@ -191,6 +199,12 @@
           <article class="card reveal">
             <h3>AI Hiring Feed</h3>
             <ul id="activityFeed" class="feed-list"></ul>
+          </article>
+          <article class="card reveal animate-slide-up">
+            <p class="pill">Featured Project</p>
+            <h3>UX Designer for Mobile App Redesign</h3>
+            <p>Fixed Price • 8-week sprint • Immediate start</p>
+            <p>Redesign onboarding and conversion flow for a subscription-based wellness app.</p>
           </article>
         </div>
       </section>
@@ -241,6 +255,12 @@
             <p>Full-Stack Developer • 120+ completed contracts</p>
             <p>Builds robust SaaS products with React, TypeScript, Node.js, and cloud-native stacks.</p>
           </article>
+        </div>
+      </section>
+
+      <section id="talent" class="section container">
+        <h2 class="reveal">Top Talent Profiles</h2>
+        <div class="profile-grid">
           <article class="case reveal">
             <h3>Sophia Ahmad</h3>
             <p>Growth Strategist • Ex-startup operator • Demand generation expert</p>
