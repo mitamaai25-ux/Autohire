@@ -1,11 +1,15 @@
 
-const customCursor = document.querySelector('.custom-cursor');
-if (customCursor) {
-  document.addEventListener('mousemove', (event) => {
-    customCursor.style.left = `${event.clientX}px`;
-    customCursor.style.top = `${event.clientY}px`;
-  });
+let customCursor = document.querySelector('.custom-cursor');
+if (!customCursor) {
+  customCursor = document.createElement('div');
+  customCursor.className = 'custom-cursor';
+  document.body.appendChild(customCursor);
 }
+
+document.addEventListener('mousemove', (event) => {
+  customCursor.style.left = `${event.clientX}px`;
+  customCursor.style.top = `${event.clientY}px`;
+});
 
 const storageKeys = {
   user: 'autohiree_admin_user',
