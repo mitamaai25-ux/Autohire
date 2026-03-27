@@ -1,11 +1,11 @@
 :root {
-  --bg: #070d1f;
-  --surface: #101a38;
-  --text: #eff4ff;
-  --muted: #aebae1;
-  --brand: #2f7dff;
-  --brand-2: #24c3ff;
-  --line: #29417c;
+  --bg: #0a0320;
+  --surface: #1b1148;
+  --text: #f7f3ff;
+  --muted: #c5b6f5;
+  --brand: #ff4fd8;
+  --brand-2: #39e3ff;
+  --line: #5a3cc6;
 }
 
 * { box-sizing: border-box; }
@@ -15,7 +15,7 @@ body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 10% 0%, #16306d 0%, #0b1737 42%, var(--bg) 85%);
+  background: radial-gradient(circle at 8% 0%, #4f1cc2 0%, #1e0f4f 42%, var(--bg) 88%);
   line-height: 1.6;
 }
 
@@ -33,11 +33,11 @@ body {
 .hero-content { margin-top: 3.3rem; }
 .eyebrow {
   display: inline-block;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(106, 251, 255, 0.75);
   border-radius: 999px;
   padding: 0.3rem 0.8rem;
   font-size: 0.78rem;
-  color: var(--muted);
+  color: #ddf8ff;
 }
 
 h1 { font-size: clamp(2rem, 6vw, 4rem); margin: 0.9rem 0; max-width: 18ch; line-height: 1.1; }
@@ -59,25 +59,24 @@ p { margin: 0; color: var(--muted); }
   cursor: pointer;
   display: inline-block;
 }
-.btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), #ff9f4f, var(--brand-2)); }
 .btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
 
 .apply-button {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.glass { backdrop-filter: blur(6px); }
 
 .apply-button:hover {
   transform: scale(1.05);
-  background-color: #0056b3;
+  background-color: #8f24ff;
 }
-.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
-.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
-.counters span { color: var(--muted); font-size: 0.9rem; }
+.btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
+
 
 .card, .case, .feature, .contact-info {
-  background: linear-gradient(150deg, rgba(28, 40, 80, 0.72), rgba(12, 18, 38, 0.66));
+  background: linear-gradient(145deg, rgba(71, 32, 134, 0.72), rgba(16, 24, 58, 0.8));
   border: 1px solid var(--line);
   border-radius: 1rem;
   padding: 1.15rem;
@@ -99,6 +98,25 @@ p { margin: 0; color: var(--muted); }
 
 .job-grid, .profile-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 
+
+
+.lottie-wrap {
+  display: grid;
+  grid-template-columns: 1.2fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+.glass { backdrop-filter: blur(6px); }
+
+.lottie-wrap dotlottie-player {
+  justify-self: center;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .live-activity {
   border: 1px solid #38648f;
@@ -280,6 +298,8 @@ p { margin: 0; color: var(--muted); }
   color: var(--muted);
 }
 
+
+
 .dashboard-shell {
   background: radial-gradient(circle at 40% 50%, #101b46, #081234 72%);
 }
@@ -303,7 +323,7 @@ p { margin: 0; color: var(--muted); }
   border: 1px solid var(--line);
   border-radius: 0.8rem;
   overflow: hidden;
-  background: #252f4d;
+  background: linear-gradient(180deg, #3b236e, #2a2f63);
 }
 
 .freelancer-sidebar a {
@@ -372,12 +392,12 @@ p { margin: 0; color: var(--muted); }
 }
 
 .invite-client {
-  background: #f6b224;
+  background: linear-gradient(120deg, #ffcb2f, #ff9b2f);
   color: #1f1f1f;
 }
 
 .invite-network {
-  background: #48c64e;
+  background: linear-gradient(120deg, #4ce65f, #27b8b2);
   color: #132110;
 }
 
@@ -436,7 +456,7 @@ input, textarea, select {
 .footer { border-top: 1px solid var(--line); padding: 1rem 0; }
 
 .footer-mega {
-  background: #11100d;
+  background: linear-gradient(180deg, #130a2b, #1b0b35);
   border-top: 1px solid #282316;
   padding: 3rem 0 1.2rem;
 }
@@ -510,7 +530,8 @@ input, textarea, select {
   .dashboard-tabs,
   .footer-columns,
   .invite-grid,
-  .live-grid {
+  .live-grid,
+  .lottie-wrap {
     grid-template-columns: 1fr;
   }
 }

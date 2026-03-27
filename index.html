@@ -20,6 +20,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   </head>
   <body>
     <header class="hero" id="top">
@@ -62,6 +63,25 @@
       </section>
 
 
+
+
+      <section class="section container lottie-section">
+        <div class="card reveal lottie-wrap">
+          <div>
+            <p class="eyebrow">ANIMATED WORKFLOW</p>
+            <h2>Visualize AutoHiree automation in motion</h2>
+            <p class="lead">We added a Lottie-based SVG animation block for richer interactive storytelling.</p>
+          </div>
+          <dotlottie-player
+            src="https://lottie.host/6d5dbf88-0c83-4f13-8cc2-fce2f73f6282/jw1i5vE2vl.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+          ></dotlottie-player>
+        </div>
+      </section>
 
       <section id="live-activity" class="section container">
         <div class="card live-activity reveal">
@@ -171,6 +191,18 @@
           <article class="card reveal">
             <h3>AI Hiring Feed</h3>
             <ul id="activityFeed" class="feed-list"></ul>
+          </article>
+          <article class="card reveal animate-slide-up delay-2">
+            <p class="pill">Featured Full-Time</p>
+            <h3>Head of Growth Marketing</h3>
+            <p>$120k–$150k • Hybrid • B2B Fintech</p>
+            <p>Own inbound engine, performance strategy, and funnel optimization across channels.</p>
+          </article>
+          <article class="card reveal animate-slide-up">
+            <p class="pill">Featured Project</p>
+            <h3>UX Designer for Mobile App Redesign</h3>
+            <p>Fixed Price • 8-week sprint • Immediate start</p>
+            <p>Redesign onboarding and conversion flow for a subscription-based wellness app.</p>
           </article>
         </div>
       </section>
