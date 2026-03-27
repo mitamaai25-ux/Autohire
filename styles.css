@@ -13,6 +13,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
+  cursor: none;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: radial-gradient(circle at 8% 0%, #4f1cc2 0%, #1e0f4f 42%, var(--bg) 88%);
@@ -540,4 +541,18 @@ input, textarea, select {
   .freelancer-dashboard {
     grid-template-columns: 1fr;
   }
+}
+
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0ff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  box-shadow: 0 0 10px #0ff;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  z-index: 9999;
 }

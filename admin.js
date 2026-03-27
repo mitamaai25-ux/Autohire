@@ -1,3 +1,12 @@
+
+const customCursor = document.querySelector('.custom-cursor');
+if (customCursor) {
+  document.addEventListener('mousemove', (event) => {
+    customCursor.style.left = `${event.clientX}px`;
+    customCursor.style.top = `${event.clientY}px`;
+  });
+}
+
 const storageKeys = {
   user: 'autohiree_admin_user',
   projects: 'autohiree_admin_projects',
