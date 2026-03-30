@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="AutoHiree combines Upwork-style project hiring with LinkedIn-style professional networking in one AI-powered platform."
+      content="AutoHiree helps students and professionals discover AI-matched jobs, build better profiles, and get hired faster."
     />
-    <meta
-      name="keywords"
-      content="AutoHiree, freelance marketplace, professional network, AI hiring, remote talent"
-    />
-    <meta name="author" content="AutoHiree" />
-    <title>AutoHiree | Upwork + LinkedIn, Reimagined with AI</title>
+    <title>AutoHiree | AI Career Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +21,7 @@
     <header class="hero" id="top">
       <nav class="container nav">
         <a href="#top" class="logo">Auto<span>Hiree</span></a>
-                <div class="nav-links">
+        <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="freelancer-dashboard.html">Freelancer</a>
           <a href="client-dashboard.html">Client Dashboard</a>
@@ -36,15 +31,15 @@
       </nav>
 
       <div class="container hero-content reveal">
-        <p class="eyebrow animate-slide-up">Upwork × LinkedIn Experience</p>
-        <h1 class="animate-slide-up delay-1">Find projects, grow your network, and hire top talent in one place.</h1>
+        <p class="eyebrow animate-slide-up">AI Career Platform</p>
+        <h1 class="animate-slide-up delay-1">Launch your next career move with smarter job matching.</h1>
         <p class="lead animate-slide-up delay-2">
-          AutoHiree merges freelance hiring workflows with a professional social graph. Post jobs,
-          discover verified talent, follow industry updates, and close hires faster with AI matching.
+          AutoHiree analyzes your profile, skills, and goals to connect you with highly relevant roles and
+          freelance projects—faster than traditional job boards.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn apply-button btn-primary">Hire Talent</a>
-          <a href="#talent-apply" class="btn apply-button btn-ghost">Create Freelancer Profile</a>
+          <a href="#marketplace" class="btn apply-button btn-primary">Explore Jobs</a>
+          <a href="#contact" class="btn apply-button btn-ghost">Get Matched</a>
         </div>
       </div>
     </header>
@@ -52,25 +47,22 @@
     <main>
       <section class="section alt" id="impact">
         <div class="container">
-          <h2 class="reveal">Platform Snapshot</h2>
-          <ul class="counters reveal" aria-label="Platform performance metrics">
-            <li><strong data-target="15500">0</strong><span>Freelancers & Candidates</span></li>
-            <li><strong data-target="4200">0</strong><span>Hiring Companies</span></li>
-            <li><strong data-target="9200">0</strong><span>Monthly Job Applications</span></li>
-            <li><strong data-target="89">0</strong><span>Match Accuracy (%)</span></li>
+          <h2 class="reveal">Career Spark Snapshot</h2>
+          <ul class="counters reveal" aria-label="Platform metrics">
+            <li><strong data-target="18500">0</strong><span>Active Candidates</span></li>
+            <li><strong data-target="5200">0</strong><span>Hiring Companies</span></li>
+            <li><strong data-target="93">0</strong><span>Match Accuracy (%)</span></li>
+            <li><strong data-target="72">0</strong><span>Applications Shortlisted (%)</span></li>
           </ul>
         </div>
       </section>
 
-
-
-
       <section class="section container lottie-section">
         <div class="card reveal lottie-wrap">
           <div>
-            <p class="eyebrow">ANIMATED WORKFLOW</p>
-            <h2>Visualize AutoHiree automation in motion</h2>
-            <p class="lead">We added a Lottie-based SVG animation block for richer interactive storytelling.</p>
+            <p class="eyebrow">AI EXPLAINABILITY</p>
+            <h2>Understand why each opportunity fits your profile</h2>
+            <p class="lead">Transparent AI recommendations with skill-gap and readiness insights.</p>
           </div>
           <dotlottie-player
             src="https://lottie.host/6d5dbf88-0c83-4f13-8cc2-fce2f73f6282/jw1i5vE2vl.lottie"
@@ -81,6 +73,43 @@
             autoplay
           ></dotlottie-player>
         </div>
+      </section>
+
+      <section id="marketplace" class="section container">
+        <h2 class="reveal">Recommended Jobs Marketplace</h2>
+
+        <form class="search-form reveal" id="jobSearchForm">
+          <input type="text" placeholder="Search jobs..." id="search-bar" class="search-textbox" />
+          <button type="submit" class="search-button apply-button">Search</button>
+        </form>
+
+        <div class="job-grid" id="jobGrid">
+          <article class="job-card reveal animate-slide-up delay-1" data-title="Frontend Developer" data-meta="Remote | Startup">
+            <h3>Frontend Developer</h3>
+            <p>CareerSpark Labs | Remote</p>
+            <p>React, TypeScript • USD 50-70/hr</p>
+            <button class="apply-btn apply-button">Apply Now</button>
+          </article>
+
+          <article class="job-card reveal animate-slide-up delay-2" data-title="AI Product Analyst" data-meta="Hybrid | Fintech">
+            <h3>AI Product Analyst</h3>
+            <p>Nova Finance | Hybrid • Austin</p>
+            <p>Full-Time • USD 95k-120k</p>
+            <button class="apply-btn apply-button">Apply Now</button>
+          </article>
+
+          <article class="job-card reveal animate-slide-up" data-title="UX Writer" data-meta="Contract | Mobile">
+            <h3>UX Writer</h3>
+            <p>Bright App Co. | Contract</p>
+            <p>8-week sprint • Fixed Budget</p>
+            <button class="apply-btn apply-button">Apply Now</button>
+          </article>
+        </div>
+
+        <section class="section" id="community-projects">
+          <h3 class="reveal">Latest Community Projects</h3>
+          <ul id="featuredProjects" class="project-list reveal"></ul>
+        </section>
       </section>
 
       <section id="live-activity" class="section container">
@@ -132,160 +161,19 @@
         </div>
       </section>
 
-      <section id="dashboards" class="section container">
-        <h2 class="reveal">Connected Platform Dashboards</h2>
-        <p class="lead reveal">Two attached experiences keep everyone aligned from onboarding to client delivery, while Freelancer has a dedicated page.</p>
-        <div class="dashboard-tabs reveal" role="tablist" aria-label="AutoHiree dashboards">
-          <button class="tab-btn apply-button active" data-tab="onboarding" role="tab" aria-selected="true">Onboarding Dashboard</button>
-          <button class="tab-btn apply-button" data-tab="client" role="tab" aria-selected="false">Client Dashboard</button>
+      <section class="section container">
+        <div class="card reveal">
+          <h2>Frontend ↔ Backend Connection Demo</h2>
+          <p class="lead">Click to make an async request to <code>http://localhost:3000/api/data</code>.</p>
+          <button onclick="fetchData()" class="btn apply-button btn-primary" type="button">Get Data from Backend</button>
+          <p id="data-output">Data will appear here...</p>
         </div>
-
-        <div class="tab-panels reveal">
-          <article class="tab-panel active card" data-panel="onboarding">
-            <h3>Onboarding Dashboard</h3>
-            <ul>
-              <li>AI-guided onboarding checklist for company setup, hiring goals, and budget preferences.</li>
-              <li>Freelancer profile verification with skills, portfolio links, and identity trust scoring.</li>
-              <li>Role and project templates to launch hiring in under 10 minutes.</li>
-            </ul>
-          </article>
-
-          <article class="tab-panel card" data-panel="client">
-            <h3>Client Dashboard</h3>
-            <ul>
-              <li>Job posting pipeline with matched candidate shortlist and proposal comparison.</li>
-              <li>Unified workspace for interviews, milestone contracts, and payment tracking.</li>
-              <li>Analytics panel for time-to-hire, budget usage, and team performance.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="marketplace" class="section container">
-        <h2 class="reveal">Upwork-Style Jobs Marketplace</h2>
-
-        <form class="search-form reveal" id="jobSearchForm">
-          <input type="text" placeholder="Search jobs..." id="search-bar" class="search-textbox" />
-          <button type="submit" class="search-button apply-button">Search</button>
-        </form>
-
-        <div class="job-grid" id="jobGrid">
-          <article class="job-card reveal animate-slide-up delay-1" data-title="Senior Full-Stack Engineer" data-meta="SaaS | Remote">
-            <h3>Senior Full-Stack Engineer</h3>
-            <p>NovaCloud | Remote (US/Europe overlap)</p>
-            <p>$65–$90/hr • 6 months</p>
-            <button class="apply-btn apply-button">Apply Now</button>
-          </article>
-
-          <article class="job-card reveal animate-slide-up delay-2" data-title="Head of Growth Marketing" data-meta="Fintech | Hybrid">
-            <h3>Head of Growth Marketing</h3>
-            <p>FinEdge | Hybrid • New York</p>
-            <p>$120k–$150k • Full-Time</p>
-            <button class="apply-btn apply-button">Apply Now</button>
-          </article>
-
-          <article class="job-card reveal animate-slide-up" data-title="UX Designer" data-meta="Mobile | Contract">
-            <h3>UX Designer</h3>
-            <p>Wellnest App | Remote</p>
-            <p>Fixed Price • 8-week sprint</p>
-            <button class="apply-btn apply-button">Apply Now</button>
-          </article>
-        </div>
-      </section>
-
-      <section id="network" class="section container">
-        <h2 class="reveal">LinkedIn-Style Professional Network</h2>
-        <div class="network-layout">
-          <article class="card reveal">
-            <h3>AI Hiring Feed</h3>
-            <ul id="activityFeed" class="feed-list"></ul>
-          </article>
-
-          <article class="job-card reveal animate-slide-up delay-2" data-title="Head of Growth Marketing" data-meta="Fintech | Hybrid">
-            <h3>Head of Growth Marketing</h3>
-            <p>FinEdge | Hybrid • New York</p>
-            <p>$120k–$150k • Full-Time</p>
-            <button class="apply-btn apply-button">Apply Now</button>
-          </article>
-
-          <article class="job-card reveal animate-slide-up" data-title="UX Designer" data-meta="Mobile | Contract">
-            <h3>UX Designer</h3>
-            <p>Wellnest App | Remote</p>
-            <p>Fixed Price • 8-week sprint</p>
-            <button class="apply-btn apply-button">Apply Now</button>
-          </article>
-        </div>
-      </section>
-
-      <section id="network" class="section container">
-        <h2 class="reveal">LinkedIn-Style Professional Network</h2>
-        <div class="network-layout">
-          <article class="card reveal">
-            <h3>Career Graph Insights</h3>
-            <div class="feature-grid">
-              <article class="feature">
-                <h4>Trusted Referrals</h4>
-                <p>Ask mutual connections for warm intros to vetted hiring managers.</p>
-              </article>
-              <article class="feature">
-                <h4>Skill Endorsements</h4>
-                <p>Collect verifiable endorsements from clients and past team leads.</p>
-              </article>
-              <article class="feature">
-                <h4>Thought Leadership</h4>
-                <p>Publish project outcomes and case studies to attract premium clients.</p>
-              </article>
-              <article class="feature">
-                <h4>AI Recommendations</h4>
-                <p>Receive networking suggestions based on domain, stage, and hiring intent.</p>
-              </article>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="talent" class="section container">
-        <h2 class="reveal">Top Talent Profiles</h2>
-        <div class="profile-grid">
-          <article class="case reveal">
-            <h3>Elena Carter</h3>
-            <p>AI Product Manager • 8 years • 97% client success score</p>
-            <p>Specializes in B2B workflow automation, LLM product strategy, and team scaling.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="talent" class="section container">
-        <h2 class="reveal">Top Talent Profiles</h2>
-        <div class="profile-grid">
-          <article class="case reveal">
-            <h3>Marcus Lee</h3>
-            <p>Full-Stack Developer • 120+ completed contracts</p>
-            <p>Builds robust SaaS products with React, TypeScript, Node.js, and cloud-native stacks.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="talent" class="section container">
-        <h2 class="reveal">Top Talent Profiles</h2>
-        <div class="profile-grid">
-          <article class="case reveal">
-            <h3>Sophia Ahmad</h3>
-            <p>Growth Strategist • Ex-startup operator • Demand generation expert</p>
-            <p>Designs revenue systems combining paid acquisition, lifecycle, and conversion analytics.</p>
-          </article>
-        </div>
-
-        <section class="section" id="community-projects">
-          <h3 class="reveal">Latest Community Projects</h3>
-          <ul id="featuredProjects" class="project-list reveal"></ul>
-        </section>
       </section>
 
       <section id="contact" class="section alt">
         <div class="container dual-form-layout">
           <form class="contact-form card glass reveal" id="contactForm">
-            <h3>For Companies: Hire Now</h3>
+            <h3>For Companies: Hire Faster</h3>
             <label>Company Name <input type="text" name="company" required /></label>
             <label>Work Email <input type="email" name="email" required /></label>
             <label>Hiring Need
@@ -359,6 +247,6 @@
     </footer>
 
     <script src="script.js"></script>
-      <div class="custom-cursor"></div>
+    <div class="custom-cursor"></div>
   </body>
 </html>

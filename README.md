@@ -25,3 +25,16 @@ AutoHiree is a professional AI-built website concept that combines the best expe
 
 ## Run locally
 Open `index.html` directly in your browser.
+
+
+## Frontend + Backend Demo Connection
+A simple Express backend is included for demo API calls from the homepage.
+
+### Start backend
+```bash
+npm install
+npm start
+```
+
+Backend endpoint:
+- `GET http://localhost:3000/api/data`
