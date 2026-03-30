@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed Dashboard | AutoHiree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="feed-shell">
+      <aside class="feed-sidebar">
+        <a href="index.html" class="feed-brand">Autohiree</a>
+        <nav class="feed-menu">
+          <a class="active" href="#">Feed</a>
+          <a href="#">Jobs</a>
+          <a href="#">Freelance</a>
+          <a href="#">Network</a>
+          <a href="#">Messages</a>
+          <a href="#">Notifications</a>
+          <a href="#">Companies</a>
+          <a href="#">Startups</a>
+          <a href="#">Analytics</a>
+          <a href="#">Profile</a>
+        </nav>
+      </aside>
+
+      <section class="feed-main">
+        <header class="feed-topbar">
+          <input type="text" placeholder="Search jobs, people, skills..." />
+          <div class="feed-top-icons">
+            <span>🔔</span>
+            <span>💬</span>
+            <span class="avatar-mini">A</span>
+          </div>
+        </header>
+
+        <section class="feed-content">
+          <article class="feed-card composer-card">
+            <form id="feedPostForm">
+              <textarea id="feedPostInput" rows="2" placeholder="Share an opportunity, idea, or achievement..."></textarea>
+              <div class="composer-actions">
+                <div class="composer-options">
+                  <span>🖼 Image</span>
+                  <span>🎬 Video</span>
+                  <span>💼 Job</span>
+                </div>
+                <button class="btn apply-button btn-primary" type="submit">Post</button>
+              </div>
+            </form>
+          </article>
+
+          <div id="feedList">
+            <article class="feed-card post-card">
+              <div class="post-head">
+                <div class="avatar-mini">S</div>
+                <div>
+                  <h3>Sarah Chen <span>· Follow</span></h3>
+                  <p>Senior UX Designer at Google • 2h ago</p>
+                </div>
+              </div>
+              <p>🚀 Excited to share that we're hiring 3 UX designers for our AI products team! Remote-friendly and competitive salary.</p>
+              <p class="post-tags">#Hiring #UXDesign #AI #GoogleJobs</p>
+              <div class="post-actions"><span>❤ 142</span><span>💬 28</span><span>🔁 15</span><span>🔖 Save</span></div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="feed-dashboard.js"></script>
+    <div class="custom-cursor"></div>
+  </body>
+</html>
