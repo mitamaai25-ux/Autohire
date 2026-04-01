@@ -1,11 +1,11 @@
 :root {
-  --bg: #f4f8ff;
+  --bg: #f6f8fc;
   --surface: #ffffff;
-  --text: #1e2b3a;
-  --muted: #5e6f85;
-  --brand: #2563eb;
-  --brand-2: #06b6d4;
-  --line: #d9e4f2;
+  --text: #182536;
+  --muted: #5f7188;
+  --brand: #1f6feb;
+  --brand-2: #00a9a5;
+  --line: #d7e2ef;
 }
 
 * { box-sizing: border-box; }
@@ -14,9 +14,9 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   cursor: none;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 10% 0%, #e8f1ff 0%, #f6f9ff 42%, var(--bg) 88%);
+  background: radial-gradient(circle at 12% 0%, #edf3ff 0%, #f8fbff 40%, var(--bg) 90%);
   line-height: 1.6;
 }
 
@@ -34,11 +34,11 @@ body {
 .hero-content { margin-top: 3.3rem; }
 .eyebrow {
   display: inline-block;
-  border: 1px solid rgba(106, 251, 255, 0.75);
+  border: 1px solid rgba(31, 111, 235, 0.35);
   border-radius: 999px;
   padding: 0.3rem 0.8rem;
   font-size: 0.78rem;
-  color: #1f4f86;
+  color: #1f5ca8;
 }
 
 h1 { font-size: clamp(2rem, 6vw, 4rem); margin: 0.9rem 0; max-width: 18ch; line-height: 1.1; }
@@ -70,7 +70,7 @@ p { margin: 0; color: var(--muted); }
 
 .apply-button:hover {
   transform: scale(1.05);
-  background-color: #1d4ed8;
+  background-color: #0f5ad7;
 }
 
 .card, .case, .feature, .contact-info {
@@ -90,21 +90,13 @@ p { margin: 0; color: var(--muted); }
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.9rem;
 }
-.counters li 
-{ 
-  background: var(--surface); 
-  border: 1px solid var(--line); 
-  border-radius: 0.9rem; 
-  padding: 0.95rem; 
-}
-.counters strong 
-{ 
-  display: block; 
-  font-size: 1.5rem; 
-  color: #dfe6ff; 
-}
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
 .counters span { color: var(--muted); font-size: 0.9rem; }
+
 .job-grid, .profile-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+
 .search-form {
   display: flex;
   justify-content: space-between;
@@ -164,7 +156,6 @@ p { margin: 0; color: var(--muted); }
 .counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
 .counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
 .counters span { color: var(--muted); font-size: 0.9rem; }
-
 .lottie-wrap {
   display: grid;
   grid-template-columns: 1.2fr auto;
@@ -304,7 +295,6 @@ p { margin: 0; color: var(--muted); }
 }
 .btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
 .btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
-
 .dashboard-tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -354,7 +344,6 @@ p { margin: 0; color: var(--muted); }
   padding-left: 1.1rem;
   color: var(--muted);
 }
-
 .dashboard-shell {
   background: radial-gradient(circle at 40% 50%, #101b46, #081234 72%);
 }
@@ -553,7 +542,6 @@ input, textarea, select {
 .linkedin { display: inline-flex; gap: 0.4rem; align-items: center; color: #dbe4ff; text-decoration: none; }
 .linkedin-icon { width: 1.3rem; height: 1.3rem; border-radius: 0.25rem; display: grid; place-items: center; background: #2e8fff; color: #fff; font-size: 0.78rem; font-weight: 700; }
 
-
 .animate-slide-up {
   opacity: 0;
   transform: translateY(30px);
@@ -596,6 +584,7 @@ input, textarea, select {
     grid-template-columns: 1fr;
   }
 }
+
 .custom-cursor {
   width: 20px;
   height: 20px;
@@ -613,12 +602,12 @@ input, textarea, select {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 280px 1fr;
-  background: #eceef2;
+  background: #eef2f7;
   color: #0f1f35;
 }
 
 .feed-sidebar {
-  background: #0d1c33;
+  background: #0f1d33;
   color: #fff;
   padding: 1.2rem 1rem;
 }
@@ -647,7 +636,7 @@ input, textarea, select {
 .feed-menu a.active,
 .feed-menu a:hover {
   background: rgba(44, 208, 211, 0.17);
-  color: #2ce6e6;
+  color: #4fd1c5;
 }
 
 .feed-main {
@@ -663,12 +652,13 @@ input, textarea, select {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  color: #5f7288;
 }
 
 .feed-topbar input {
   max-width: 560px;
   border: 1px solid #d4dae7;
-  background: #f2f5fa;
+  background: #f4f7fb;
   color: #25364e;
 }
 
