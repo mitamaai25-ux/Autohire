@@ -22,7 +22,7 @@ const renderFeedPosts = () => {
           </div>
         </div>
         <p>${post.text}</p>
-        <div class="post-actions"><span>❤ 0</span><span>💬 0</span><span>🔁 0</span><span>🔖 Save</span></div>
+        <div class="post-actions"><span><i class="fa-regular fa-heart"></i> 0</span><span><i class="fa-regular fa-comment"></i> 0</span><span><i class="fa-solid fa-share-nodes"></i> 0</span><span><i class="fa-regular fa-bookmark"></i> Save</span></div>
       `;
       feedList.prepend(article);
     });
@@ -49,7 +49,7 @@ if (feedForm && feedInput && feedList) {
         </div>
       </div>
       <p>${text}</p>
-      <div class="post-actions"><span>❤ 0</span><span>💬 0</span><span>🔁 0</span><span>🔖 Save</span></div>
+      <div class="post-actions"><span><i class="fa-regular fa-heart"></i> 0</span><span><i class="fa-regular fa-comment"></i> 0</span><span><i class="fa-solid fa-share-nodes"></i> 0</span><span><i class="fa-regular fa-bookmark"></i> Save</span></div>
     `;
 
     feedList.prepend(article);
