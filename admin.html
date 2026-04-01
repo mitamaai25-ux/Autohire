@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mitama AI Admin Login</title>
+    <title>AutoHiree Admin Portal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="section container admin-page">
-      <a href="index.html" class="btn btn-ghost">← Back to Home</a>
-      <h1>Admin Access</h1>
-      <p class="lead">Create an admin login, sign in, or recover your password to manage projects.</p>
+      <a href="index.html" class="btn apply-button btn-ghost">← Back to Home</a>
+      <h1>AutoHiree Admin Access</h1>
+      <p class="lead">Create an admin login and manage projects plus consultation requests.</p>
 
       <div class="admin-grid">
         <section class="card glass">
@@ -24,7 +24,7 @@
           <form id="registerForm" class="contact-form">
             <label>Email <input type="email" id="registerEmail" required /></label>
             <label>Password <input type="password" id="registerPassword" required minlength="6" /></label>
-            <button class="btn btn-primary" type="submit">Create Login</button>
+            <button class="btn apply-button btn-primary" type="submit">Create Login</button>
           </form>
         </section>
 
@@ -33,7 +33,7 @@
           <form id="loginForm" class="contact-form">
             <label>Email <input type="email" id="loginEmail" required /></label>
             <label>Password <input type="password" id="loginPassword" required /></label>
-            <button class="btn btn-primary" type="submit">Sign In</button>
+            <button class="btn apply-button btn-primary" type="submit">Sign In</button>
           </form>
         </section>
 
@@ -41,31 +41,38 @@
           <h2>Forgot Password</h2>
           <form id="forgotForm" class="contact-form">
             <label>Email <input type="email" id="forgotEmail" required /></label>
-            <button class="btn btn-outline" type="submit">Recover Password</button>
+            <button class="btn apply-button btn-outline" type="submit">Recover Password</button>
           </form>
           <p id="recoveryMessage"></p>
         </section>
       </div>
 
       <section id="projectManager" class="section card glass hidden">
-        <h2>Project Manager</h2>
-        <p>Add portfolio projects after login is created and signed in.</p>
+        <h2>Project, Client Lead & Talent Lead Manager</h2>
 
         <section class="card glass">
-          <h2>Client Reservations</h2>
-          <p>Messages from service booking forms appear here after sign in.</p>
+          <h2>Client Consultation Requests</h2>
+          <p>Requests submitted from the AutoHiree website appear here.</p>
           <ul id="reservationList" class="project-list"></ul>
+        </section>
+
+
+        <section class="card glass">
+          <h2>Talent Network Applications</h2>
+          <p>Freelancer profile submissions from the website appear here.</p>
+          <ul id="talentLeadList" class="project-list"></ul>
         </section>
 
         <form id="projectForm" class="contact-form">
           <label>Project Name <input type="text" id="projectName" required /></label>
           <label>Summary <textarea id="projectSummary" rows="3" required></textarea></label>
-          <button class="btn btn-primary" type="submit">Add Project</button>
+          <button class="btn apply-button btn-primary" type="submit">Add Project</button>
         </form>
         <ul id="projectList" class="project-list"></ul>
       </section>
     </main>
 
     <script src="admin.js"></script>
+      <div class="custom-cursor"></div>
   </body>
 </html>

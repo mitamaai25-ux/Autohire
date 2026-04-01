@@ -5,155 +5,257 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Mitama AI is an AI-first startup building intelligent automation, advanced analytics, and scalable digital products for modern businesses."
+      content="AutoHiree helps students and professionals discover AI-matched jobs, build better profiles, and get hired faster."
     />
-    <meta
-      name="keywords"
-      content="Mitama AI, AI startup, automation, machine learning, AI consulting, predictive analytics, recommendation engine"
-    />
-    <meta name="author" content="Mitama AI" />
-    <title>Mitama AI | AI Tech Startup Portfolio</title>
+    <title>AutoHiree | AI Career Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   </head>
   <body>
     <header class="hero" id="top">
       <nav class="container nav">
-        <a href="#top" class="logo">Mitama <span>AI</span></a>
+        <a href="#top" class="logo">Auto<span>Hiree</span></a>
         <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact" class="btn btn-outline">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="feed-dashboard.html">Feed Dashboard</a>
+          <a href="freelancer-dashboard.html">Freelancer</a>
+          <a href="client-dashboard.html">Client Dashboard</a>
+          <a href="about.html">About</a>
+          <a href="talent-network.html">Talent Network</a>
         </div>
       </nav>
 
       <div class="container hero-content reveal">
-        <p class="eyebrow">AI Tech Startup Portfolio</p>
-        <h1>Engineering intelligent products for the next generation of businesses.</h1>
-        <p class="lead">
-          Mitama AI partners with startups and enterprises to design, build, and scale
-          AI-powered platforms—combining product strategy, machine learning, and automation
-          excellence into measurable outcomes.
+        <p class="eyebrow animate-slide-up">AI Career Platform</p>
+        <h1 class="animate-slide-up delay-1">Launch your next career move with smarter job matching.</h1>
+        <p class="lead animate-slide-up delay-2">
+          AutoHiree analyzes your profile, skills, and goals to connect you with highly relevant roles and
+          freelance projects—faster than traditional job boards.
         </p>
         <div class="hero-actions">
-          <a href="#portfolio" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-ghost">Book Discovery Call</a>
+          <a href="#marketplace" class="btn apply-button btn-primary">Explore Jobs</a>
+          <a href="#contact" class="btn apply-button btn-ghost">Get Matched</a>
         </div>
       </div>
     </header>
 
     <main>
-      <section id="about" class="section container reveal">
-        <h2>About Mitama AI</h2>
-        <p>
-          We are a mission-led AI startup focused on building practical intelligence into real-world
-          products. Our team blends strong engineering, rapid experimentation, and data-driven product
-          thinking to help organizations launch smarter solutions faster.
-        </p>
-      </section>
-
       <section class="section alt" id="impact">
         <div class="container">
-          <h2 class="reveal">Impact Snapshot</h2>
-          <ul class="counters reveal" aria-label="Key portfolio metrics">
-            <li><strong data-target="48">0</strong><span>Projects Delivered</span></li>
-            <li><strong data-target="95">0</strong><span>Client Satisfaction (%)</span></li>
-            <li><strong data-target="32">0</strong><span>Average Efficiency Gain (%)</span></li>
-            <li><strong data-target="14">0</strong><span>Industries Served</span></li>
+          <h2 class="reveal">Career Spark Snapshot</h2>
+          <ul class="counters reveal" aria-label="Platform metrics">
+            <li><strong data-target="18500">0</strong><span>Active Candidates</span></li>
+            <li><strong data-target="5200">0</strong><span>Hiring Companies</span></li>
+            <li><strong data-target="93">0</strong><span>Match Accuracy (%)</span></li>
+            <li><strong data-target="72">0</strong><span>Applications Shortlisted (%)</span></li>
           </ul>
         </div>
       </section>
 
-      <section id="services" class="section container">
-        <h2 class="reveal">Core Services</h2>
-        <div class="services-grid">
-          <article class="card reveal">
-            <div class="icon">⚙️</div>
-            <h3>AI Product Development</h3>
-            <p>From idea validation to deployment-ready AI products built for scale.</p>
+      <section class="section container lottie-section">
+        <div class="card reveal lottie-wrap">
+          <div>
+            <p class="eyebrow">AI EXPLAINABILITY</p>
+            <h2>Understand why each opportunity fits your profile</h2>
+            <p class="lead">Transparent AI recommendations with skill-gap and readiness insights.</p>
+          </div>
+          <dotlottie-player
+            src="https://lottie.host/6d5dbf88-0c83-4f13-8cc2-fce2f73f6282/jw1i5vE2vl.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            autoplay
+          ></dotlottie-player>
+        </div>
+      </section>
+
+      <section id="marketplace" class="section container">
+        <h2 class="reveal">Recommended Jobs Marketplace</h2>
+
+        <form class="search-form reveal" id="jobSearchForm">
+          <input type="text" placeholder="Search jobs..." id="search-bar" class="search-textbox" />
+          <button type="submit" class="search-button apply-button">Search</button>
+        </form>
+
+        <div class="job-grid" id="jobGrid">
+          <article class="job-card reveal animate-slide-up delay-1" data-title="Frontend Developer" data-meta="Remote | Startup">
+            <h3>Frontend Developer</h3>
+            <p>CareerSpark Labs | Remote</p>
+            <p>React, TypeScript • USD 50-70/hr</p>
+            <button class="apply-btn apply-button">Apply Now</button>
           </article>
-          <article class="card reveal">
-            <div class="icon">🧠</div>
-            <h3>Machine Learning Systems</h3>
-            <p>Custom ML models, MLOps pipelines, and robust model monitoring workflows.</p>
+
+          <article class="job-card reveal animate-slide-up delay-2" data-title="AI Product Analyst" data-meta="Hybrid | Fintech">
+            <h3>AI Product Analyst</h3>
+            <p>Nova Finance | Hybrid • Austin</p>
+            <p>Full-Time • USD 95k-120k</p>
+            <button class="apply-btn apply-button">Apply Now</button>
           </article>
-          <article class="card reveal">
-            <div class="icon">🔄</div>
-            <h3>Workflow Automation</h3>
-            <p>Process automation solutions that reduce manual effort and improve velocity.</p>
-          </article>
-          <article class="card reveal">
-            <div class="icon">📊</div>
-            <h3>Predictive Analytics</h3>
-            <p>Decision-support dashboards and forecasting tools for data-backed planning.</p>
+
+          <article class="job-card reveal animate-slide-up" data-title="UX Writer" data-meta="Contract | Mobile">
+            <h3>UX Writer</h3>
+            <p>Bright App Co. | Contract</p>
+            <p>8-week sprint • Fixed Budget</p>
+            <button class="apply-btn apply-button">Apply Now</button>
           </article>
         </div>
       </section>
 
-      <section id="portfolio" class="section container">
-        <h2 class="reveal">Featured Portfolio</h2>
-        <div class="case-grid">
-          <article class="case reveal">
-            <h3>Conversational Support AI</h3>
-            <p><strong>Challenge:</strong> Customer support wait times were too high.</p>
-            <p><strong>Solution:</strong> Implemented a multilingual AI assistant integrated with CRM.</p>
-            <p><strong>Outcome:</strong> 58% faster resolution time and 35% lower support costs.</p>
-          </article>
-          <article class="case reveal">
-            <h3>Smart Workflow Orchestrator</h3>
-            <p><strong>Challenge:</strong> Approvals across departments were fragmented.</p>
-            <p><strong>Solution:</strong> Built a rule-driven workflow engine with AI prioritization.</p>
-            <p><strong>Outcome:</strong> 46% shorter cycle time and improved operational transparency.</p>
-          </article>
-          <article class="case reveal">
-            <h3>Demand Prediction Platform</h3>
-            <p><strong>Challenge:</strong> Inaccurate forecasting hurt planning accuracy.</p>
-            <p><strong>Solution:</strong> Launched a real-time demand prediction dashboard.</p>
-            <p><strong>Outcome:</strong> Forecast precision improved from 69% to 90%.</p>
-          </article>
-          <article class="case reveal">
-            <h3>Recommendation Intelligence Engine</h3>
-            <p><strong>Challenge:</strong> Engagement was dropping across digital channels.</p>
-            <p><strong>Solution:</strong> Delivered a behavior-based recommendation layer.</p>
-            <p><strong>Outcome:</strong> 27% lift in conversions and 16% increase in retention.</p>
-          </article>
+      <section id="live-activity" class="section container">
+        <div class="card live-activity reveal">
+          <p class="eyebrow">LIVE MARKETPLACE ACTIVITY</p>
+          <h2>See how projects, talent, and onboarding actions move through one system</h2>
+          <p class="lead">
+            AutoHiree connects discovery, matching, onboarding, collaboration, payouts, and review cycles
+            so teams always know the next best action.
+          </p>
+
+          <div class="live-grid">
+            <article class="card flow-card">
+              <h3>Talent + project flow</h3>
+              <div class="flow-canvas">
+                <ul class="talent-list" id="talentList">
+                  <li class="active">Ava</li>
+                  <li>Liam</li>
+                  <li>Noah</li>
+                  <li>Sara</li>
+                  <li>Mia</li>
+                </ul>
+                <div class="project-pill">Project</div>
+                <span class="flow-line l1"></span>
+                <span class="flow-line l2"></span>
+                <span class="flow-line l3 active"></span>
+                <span class="flow-line l4"></span>
+                <span class="flow-line l5"></span>
+              </div>
+            </article>
+
+            <article class="card ops-card">
+              <h3>Operations feed</h3>
+              <p id="opsStatus" class="ops-status">Reviewing freelancer readiness</p>
+              <p id="opsFit" class="ops-fit">Current best fit: <strong>Noah Garcia</strong> — Growth Marketer</p>
+              <div class="match-bar">
+                <span>AI match score</span>
+                <strong id="opsScore">91%</strong>
+              </div>
+              <ul id="opsChecklist">
+                <li>Verified profile</li>
+                <li>Portfolio strength</li>
+                <li>Budget fit</li>
+                <li>Availability</li>
+                <li>Payment readiness</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="card reveal">
+          <h2>Frontend ↔ Backend Connection Demo</h2>
+          <p class="lead">Click to make an async request to <code>http://localhost:3000/api/data</code>.</p>
+          <button onclick="fetchData()" class="btn apply-button btn-primary" type="button">Get Data from Backend</button>
+          <p id="data-output">Data will appear here...</p>
+        </div>
+      </section>
+
+
+      <section class="section container" id="attachments">
+        <div class="card reveal">
+          <h2>Attach These Files</h2>
+          <p class="lead">Upload resumes, portfolios, or certifications to complete your application pack.</p>
+          <form id="fileAttachForm" class="search-form">
+            <input id="candidateFiles" class="search-textbox" type="file" multiple />
+            <button type="submit" class="search-button apply-button">Attach Files</button>
+          </form>
+          <ul id="attachedFilesList" class="project-list"></ul>
         </div>
       </section>
 
       <section id="contact" class="section alt">
-        <div class="container contact-layout">
-          <article class="contact-info reveal">
-            <h2>Let’s build with AI</h2>
-            <p>
-              Tell us about your product vision, current bottlenecks, or automation goals. We’ll
-              propose a practical roadmap tailored to your stage and team size.
-            </p>
-            <p><strong>Email:</strong> hello@mitamaai.com</p>
-            <p><strong>LinkedIn:</strong> linkedin.com/company/mitama-ai</p>
-          </article>
+        <div class="container dual-form-layout">
+          <form class="contact-form card glass reveal" id="contactForm">
+            <h3>For Companies: Hire Faster</h3>
+            <label>Company Name <input type="text" name="company" required /></label>
+            <label>Work Email <input type="email" name="email" required /></label>
+            <label>Hiring Need
+              <select name="service" required>
+                <option value="" disabled selected>Select one</option>
+                <option>Freelance Contract Hiring</option>
+                <option>Full-Time Recruitment</option>
+                <option>Project Squad Assembly</option>
+              </select>
+            </label>
+            <label>Project / Role Brief <textarea name="brief" rows="4" required></textarea></label>
+            <button class="btn apply-button btn-primary" type="submit">Request Talent Matches</button>
+            <p id="reservationStatus" class="reservation-status" aria-live="polite"></p>
+          </form>
 
-          <form class="contact-form card glass reveal">
-            <label>Name <input type="text" name="name" required /></label>
+          <form class="contact-form card glass reveal" id="talentApplyForm">
+            <h3 id="talent-apply">For Talent: Join Network</h3>
+            <label>Full Name <input type="text" name="name" required /></label>
             <label>Email <input type="email" name="email" required /></label>
-            <label>Project Goal <textarea name="goal" rows="4" required></textarea></label>
-            <button class="btn btn-primary" type="submit">Send Inquiry</button>
+            <label>Primary Role <input type="text" name="role" required /></label>
+            <label>Profile Summary <textarea name="summary" rows="4" required></textarea></label>
+            <button class="btn apply-button btn-outline" type="submit">Submit Profile</button>
+            <p id="talentStatus" class="reservation-status" aria-live="polite"></p>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer-mega">
       <div class="container">
-        <p>© <span id="year"></span> Mitama AI. Building intelligent ecosystems.</p>
+        <div class="footer-columns">
+          <div>
+            <h4>Product</h4>
+            <a href="#">Agents</a>
+            <a href="#">Enterprise</a>
+            <a href="#">Pricing</a>
+            <a href="#">Code Review</a>
+            <a href="#">Marketplace</a>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <a href="#">Download</a>
+            <a href="#">Changelog</a>
+            <a href="#">Docs</a>
+            <a href="#">Learn</a>
+            <a href="#">Forum</a>
+            <a href="#">Status</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+            <a href="#">Community</a>
+            <a href="#">Students</a>
+            <a href="#">Brand</a>
+            <a href="#">Future</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Data Use</a>
+            <a href="#">Security</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> AutoHiree</p>
+          <p>AI-powered hiring and freelancing platform.</p>
+        </div>
       </div>
     </footer>
 
     <script src="script.js"></script>
+    <div class="custom-cursor"></div>
   </body>
 </html>
