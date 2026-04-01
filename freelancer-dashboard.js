@@ -75,10 +75,40 @@ profileForm.addEventListener('submit', (event) => {
   setProfile(profile);
   hydrateProfile();
   profileStatus.textContent = 'Profile updated successfully.';
+  setActionStatus('Profile updated and synced in dashboard.');
 });
 
 document.getElementById('openProfileBtn').addEventListener('click', () => {
   showView('profile');
+});
+
+const dashboardActionStatus = document.getElementById('dashboardActionStatus');
+const setActionStatus = (message) => {
+  if (dashboardActionStatus) dashboardActionStatus.textContent = message;
+};
+
+document.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-action]');
+  if (!button) return;
+
+  const action = button.dataset.action;
+  if (action === 'view-projects') {
+    showView('browse');
+    setActionStatus('Opened Browse Projects.');
+  } else if (action === 'submit-proposal') {
+    showView('proposals');
+    setActionStatus('Opened Proposals section.');
+  } else if (action === 'open-workspace') {
+    setActionStatus('Workspace opened successfully.');
+  } else if (action === 'add-payout') {
+    setActionStatus('Payout method modal opened (demo).');
+  } else if (action === 'generate-invoice') {
+    setActionStatus('Invoice generated successfully (demo).');
+  } else if (action === 'schedule-call') {
+    setActionStatus('Call scheduler opened (demo).');
+  } else if (action === 'save-settings') {
+    setActionStatus('Account settings saved.');
+  }
 });
 
 const sampleBrowseProjects = [
@@ -130,6 +160,7 @@ browseProjects.addEventListener('click', (event) => {
   setProposals(proposals);
   renderProposals();
   showView('proposals');
+  setActionStatus('Proposal submitted successfully.');
 });
 
 const renderMyProjects = () => {

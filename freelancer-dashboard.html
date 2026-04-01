@@ -91,11 +91,11 @@
               <ul id="proposalList" class="project-list"></ul>
             </section>
 
-            <section class="card dashboard-view" data-dashboard-view="workspace"><h4>Workspace</h4><p>Track milestones, messages, and delivery files.</p></section>
-            <section class="card dashboard-view" data-dashboard-view="payment"><h4>Payment Details</h4><p>Review payout methods and transaction history.</p></section>
-            <section class="card dashboard-view" data-dashboard-view="billing"><h4>Billing</h4><p>Manage invoices, withdrawal cycles, and tax records.</p></section>
-            <section class="card dashboard-view" data-dashboard-view="calls"><h4>Scheduled Calls</h4><p>Upcoming interviews and project check-ins appear here.</p></section>
-            <section class="card dashboard-view" data-dashboard-view="settings"><h4>Account Settings</h4><p>Update password, notifications, and privacy settings.</p></section>
+            <section class="card dashboard-view" data-dashboard-view="workspace"><h4>Workspace</h4><p>Track milestones, messages, and delivery files.</p><button class="btn apply-button btn-primary" data-action="open-workspace" type="button">Open Workspace</button></section>
+            <section class="card dashboard-view" data-dashboard-view="payment"><h4>Payment Details</h4><p>Review payout methods and transaction history.</p><button class="btn apply-button btn-primary" data-action="add-payout" type="button">Add Payout Method</button></section>
+            <section class="card dashboard-view" data-dashboard-view="billing"><h4>Billing</h4><p>Manage invoices, withdrawal cycles, and tax records.</p><button class="btn apply-button btn-primary" data-action="generate-invoice" type="button">Generate Invoice</button></section>
+            <section class="card dashboard-view" data-dashboard-view="calls"><h4>Scheduled Calls</h4><p>Upcoming interviews and project check-ins appear here.</p><button class="btn apply-button btn-primary" data-action="schedule-call" type="button">Schedule Call</button></section>
+            <section class="card dashboard-view" data-dashboard-view="settings"><h4>Account Settings</h4><p>Update password, notifications, and privacy settings.</p><button class="btn apply-button btn-primary" data-action="save-settings" type="button">Save Settings</button></section>
           </div>
 
           <aside class="freelancer-right">
@@ -114,6 +114,7 @@
           </aside>
         </div>
       </section>
+          <p id="dashboardActionStatus" class="reservation-status"></p>
     </main>
 
     <footer class="footer footer-mega"><div class="container"><div class="footer-bottom"><p>© <span id="year"></span> AutoHiree</p></div></div></footer>
