@@ -82,6 +82,7 @@ document.getElementById('openProfileBtn').addEventListener('click', () => {
   showView('profile');
 });
 
+
 const dashboardActionStatus = document.getElementById('dashboardActionStatus');
 const setActionStatus = (message) => {
   if (dashboardActionStatus) dashboardActionStatus.textContent = message;
