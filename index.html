@@ -38,6 +38,9 @@
           AutoHiree analyzes your profile, skills, and goals to connect you with highly relevant roles and
           freelance projects—faster than traditional job boards.
         </p>
+        <p class="prototype-note animate-slide-up delay-2">
+          Prototype mode: use the navigator below to explore Talent, Client, Community Feed, and Admin workflows.
+        </p>
         <div class="hero-actions">
           <a href="#marketplace" class="btn apply-button btn-primary">Explore Jobs</a>
           <a href="#contact" class="btn apply-button btn-ghost">Get Matched</a>
@@ -46,6 +49,35 @@
     </header>
 
     <main>
+      <section class="section container" id="prototype-map">
+        <div class="card reveal prototype-map">
+          <h2>Prototype Navigator</h2>
+          <p class="lead">Start from a role-based path so you always know which screen to visit next.</p>
+          <div class="journey-grid">
+            <article class="journey-card">
+              <h3>Talent Journey</h3>
+              <p>Create a profile, view invites, and manage project applications.</p>
+              <a href="freelancer-dashboard.html" class="btn apply-button btn-primary">Open Freelancer Dashboard</a>
+            </article>
+            <article class="journey-card">
+              <h3>Client Journey</h3>
+              <p>Track hiring pipeline, shortlist candidates, and monitor contracts.</p>
+              <a href="client-dashboard.html" class="btn apply-button btn-primary">Open Client Dashboard</a>
+            </article>
+            <article class="journey-card">
+              <h3>Community Journey</h3>
+              <p>Browse hiring updates and network activity from teams and experts.</p>
+              <a href="feed-dashboard.html" class="btn apply-button btn-primary">Open Feed Dashboard</a>
+            </article>
+            <article class="journey-card">
+              <h3>Operations Journey</h3>
+              <p>Review consultation requests, talent submissions, and projects.</p>
+              <a href="admin.html" class="btn apply-button btn-outline">Open Admin Portal</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section alt" id="impact">
         <div class="container">
           <h2 class="reveal">Career Spark Snapshot</h2>
@@ -168,6 +200,77 @@
           <p class="lead">Click to make an async request to <code>http://localhost:3000/api/data</code>.</p>
           <button onclick="fetchData()" class="btn apply-button btn-primary" type="button">Get Data from Backend</button>
           <p id="data-output">Data will appear here...</p>
+        </div>
+      </section>
+
+      <section id="live-activity" class="section container">
+        <div class="card live-activity reveal">
+          <p class="eyebrow">LIVE MARKETPLACE ACTIVITY</p>
+          <h2>See how projects, talent, and onboarding actions move through one system</h2>
+          <p class="lead">
+            AutoHiree connects discovery, matching, onboarding, collaboration, payouts, and review cycles
+            so teams always know the next best action.
+          </p>
+
+          <div class="live-grid">
+            <article class="card flow-card">
+              <h3>Talent + project flow</h3>
+              <div class="flow-canvas">
+                <ul class="talent-list" id="talentList">
+                  <li class="active">Ava</li>
+                  <li>Liam</li>
+                  <li>Noah</li>
+                  <li>Sara</li>
+                  <li>Mia</li>
+                </ul>
+                <div class="project-pill">Project</div>
+                <span class="flow-line l1"></span>
+                <span class="flow-line l2"></span>
+                <span class="flow-line l3 active"></span>
+                <span class="flow-line l4"></span>
+                <span class="flow-line l5"></span>
+              </div>
+            </article>
+
+            <article class="card ops-card">
+              <h3>Operations feed</h3>
+              <p id="opsStatus" class="ops-status">Reviewing freelancer readiness</p>
+              <p id="opsFit" class="ops-fit">Current best fit: <strong>Noah Garcia</strong> — Growth Marketer</p>
+              <div class="match-bar">
+                <span>AI match score</span>
+                <strong id="opsScore">91%</strong>
+              </div>
+              <ul id="opsChecklist">
+                <li>Verified profile</li>
+                <li>Portfolio strength</li>
+                <li>Budget fit</li>
+                <li>Availability</li>
+                <li>Payment readiness</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="card reveal">
+          <h2>Frontend ↔ Backend Connection Demo</h2>
+          <p class="lead">Click to make an async request to <code>http://localhost:3000/api/data</code>.</p>
+          <button onclick="fetchData()" class="btn apply-button btn-primary" type="button">Get Data from Backend</button>
+          <p id="data-output">Data will appear here...</p>
+        </div>
+      </section>
+
+
+      <section class="section container" id="attachments">
+        <div class="card reveal">
+          <h2>Attach These Files</h2>
+          <p class="lead">Upload resumes, portfolios, or certifications to complete your application pack.</p>
+          <form id="fileAttachForm" class="search-form">
+            <input id="candidateFiles" class="search-textbox" type="file" multiple />
+            <button type="submit" class="search-button apply-button">Attach Files</button>
+          </form>
+          <ul id="attachedFilesList" class="project-list"></ul>
         </div>
       </section>
 

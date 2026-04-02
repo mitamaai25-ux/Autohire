@@ -17,6 +17,7 @@ AutoHiree is a professional AI-built website concept that combines the best expe
 - `admin.html`: Local admin portal for login, lead tracking, and community project publishing.
 
 ## Current Prototype Features
+- Role-based **Prototype Navigator** on the homepage so users can quickly jump to Talent, Client, Feed, or Admin flows.
 - Featured jobs marketplace cards.
 - Professional activity feed and career graph insights.
 - Connected dashboards on the main page: Onboarding and Client, with a dedicated Freelancer page.
@@ -27,6 +28,12 @@ AutoHiree is a professional AI-built website concept that combines the best expe
 
 ## Run locally
 Open `index.html` directly in your browser.
+
+### Recommended walkthrough order
+1. `index.html` → use the **Prototype Navigator** section.
+2. `feed-dashboard.html` → explore discovery + community activity.
+3. `freelancer-dashboard.html` or `client-dashboard.html` depending on role.
+4. `admin.html` to review form submissions and manage projects.
 
 
 ## Frontend + Backend Demo Connection
