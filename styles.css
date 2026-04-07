@@ -175,6 +175,7 @@ p { margin: 0; color: var(--muted); }
   border-radius: 8px;
   cursor: pointer;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .job-card {
   border: 1px solid #8f7ed4;
@@ -183,6 +184,9 @@ p { margin: 0; color: var(--muted); }
   transition: box-shadow 0.3s;
   background: #ffffff;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .job-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
@@ -251,6 +255,7 @@ p { margin: 0; color: var(--muted); }
   gap: 0.8rem;
   width: 110px;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .talent-list li {
   border: 1px solid #4d70b7;
@@ -258,6 +263,9 @@ p { margin: 0; color: var(--muted); }
   padding: 0.35rem 0.7rem;
   color: #bed3ff;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .talent-list li.active {
   border-color: #70c9ff;
@@ -323,6 +331,9 @@ p { margin: 0; color: var(--muted); }
   font-size: 1.8rem;
   line-height: 1;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 #opsChecklist li {
   margin-bottom: 0.25rem;
@@ -340,6 +351,7 @@ p { margin: 0; color: var(--muted); }
   gap: 0.6rem;
   margin: 1.2rem 0 0.8rem;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .tab-btn {
   border: 1px solid var(--line);
@@ -357,6 +369,9 @@ p { margin: 0; color: var(--muted); }
   background: linear-gradient(120deg, var(--brand), var(--brand-2));
   color: #1c2e45;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .tab-panels {
   border: 1px solid var(--line);
@@ -750,6 +765,7 @@ input, textarea, select {
   margin: 1.4rem auto;
   display: grid;
   gap: 1rem;
+  color: #5f7288;
 }
 
 .feed-layout {
@@ -795,6 +811,8 @@ input, textarea, select {
   padding: 0.35rem 0.75rem;
   cursor: pointer;
   font: inherit;
+  resize: vertical;
+  color: #2a3a4d;
 }
 
 .chip.active {
