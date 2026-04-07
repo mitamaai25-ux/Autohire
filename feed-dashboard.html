@@ -68,28 +68,7 @@
               </form>
             </article>
 
-            <section class="feed-skill-grid" id="skillHarvestGrid">
-              <article class="feed-card harvest-card" data-type="skills">
-                <h3>Prompt Engineering Sprint</h3>
-                <p>Join a 2-week guided sprint and unlock a verified badge.</p>
-                <button class="btn apply-button btn-outline" type="button">Join Track</button>
-              </article>
-              <article class="feed-card harvest-card" data-type="jobs">
-                <h3>Remote AI Content Strategist</h3>
-                <p>Match score 92% · Paid pilot project · Immediate start.</p>
-                <button class="btn apply-button btn-primary" type="button">Apply Now</button>
-              </article>
-              <article class="feed-card harvest-card" data-type="projects">
-                <h3>Skill-to-Project Challenge</h3>
-                <p>Build one portfolio-ready case study with peer feedback.</p>
-                <button class="btn apply-button btn-outline" type="button">Start Challenge</button>
-              </article>
-              <article class="feed-card harvest-card" data-type="mentors">
-                <h3>Mentor Office Hour</h3>
-                <p>Book a 20-min review with hiring managers and senior freelancers.</p>
-                <button class="btn apply-button btn-outline" type="button">Book Slot</button>
-              </article>
-            </section>
+            <section class="feed-skill-grid" id="skillHarvestGrid"></section>
 
             <div id="feedList">
               <article class="feed-card post-card">
@@ -110,20 +89,15 @@
           <aside class="feed-right-rail">
             <article class="feed-card">
               <h3>Weekly Progress</h3>
-              <ul class="pipeline-list">
-                <li><strong>Skill quests done:</strong> 4</li>
-                <li><strong>Opportunities unlocked:</strong> 7</li>
-                <li><strong>Interviews scheduled:</strong> 2</li>
-              </ul>
+              <ul class="pipeline-list" id="weeklyProgressList"></ul>
             </article>
             <article class="feed-card">
               <h3>Trending Skills</h3>
-              <div class="chip-row">
-                <span class="chip-label">AI Product Design</span>
-                <span class="chip-label">RAG Systems</span>
-                <span class="chip-label">Growth Analytics</span>
-                <span class="chip-label">LLM QA</span>
-              </div>
+              <div class="chip-row" id="trendingSkillsList"></div>
+            </article>
+            <article class="feed-card">
+              <h3>Top Mentors This Week</h3>
+              <ul class="pipeline-list" id="mentorList"></ul>
             </article>
             <article class="feed-card">
               <h3>Recommended Next Step</h3>
