@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed Dashboard | AutoHiree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4J8VH/5aUAZrN3A6QcmF1VdJQ9y7C2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <main class="feed-shell">
+      <aside class="feed-sidebar">
+        <a href="index.html" class="feed-brand">Autohiree</a>
+        <nav class="feed-menu">
+          <a class="active" href="feed-dashboard.html">Community Feed</a>
+          <a href="index.html#marketplace">Jobs Marketplace</a>
+          <a href="freelancer-dashboard.html">Freelancer Workspace</a>
+          <a href="talent-network.html">Talent Network</a>
+          <a href="client-dashboard.html">Client Command Center</a>
+          <a href="admin.html">Admin Operations</a>
+          <a href="about.html">About Platform</a>
+        </nav>
+      </aside>
+
+      <section class="feed-main">
+        <header class="feed-topbar">
+          <input id="feedSearchInput" type="text" placeholder="Search jobs, people, skills..." />
+          <div class="feed-top-icons">
+            <span><i class="fa-regular fa-bell"></i></span>
+            <span><i class="fa-regular fa-comment"></i></span>
+            <span class="avatar-mini">A</span>
+          </div>
+        </header>
+
+        <section class="feed-content feed-layout">
+          <div class="feed-stream">
+            <article class="feed-card prototype-context">
+              <strong>You are here:</strong> Feed Dashboard · Community + Discovery
+              <span>Use filters and skill cards below to follow a complete discovery → match → apply flow.</span>
+            </article>
+
+            <article class="feed-card filter-card">
+              <h3>Skill Harvest Path</h3>
+              <p>Choose what you want to discover right now.</p>
+              <div class="chip-row" id="feedFilterChips">
+                <button class="chip active" data-filter="all" type="button">All</button>
+                <button class="chip" data-filter="jobs" type="button">Jobs</button>
+                <button class="chip" data-filter="skills" type="button">Skills</button>
+                <button class="chip" data-filter="projects" type="button">Projects</button>
+                <button class="chip" data-filter="mentors" type="button">Mentors</button>
+              </div>
+            </article>
+
+            <article class="feed-card composer-card">
+              <form id="feedPostForm">
+                <textarea id="feedPostInput" rows="2" placeholder="Share an opportunity, idea, or achievement..."></textarea>
+                <div class="composer-actions">
+                  <div class="composer-options">
+                    <span><i class="fa-regular fa-image"></i> Image</span>
+                    <span><i class="fa-solid fa-video"></i> Video</span>
+                    <span><i class="fa-solid fa-briefcase"></i> Job</span>
+                  </div>
+                  <button class="btn apply-button btn-primary" type="submit">Post</button>
+                </div>
+              </form>
+            </article>
+
+            <section class="feed-skill-grid" id="skillHarvestGrid">
+              <article class="feed-card harvest-card" data-type="skills">
+                <h3>Prompt Engineering Sprint</h3>
+                <p>Join a 2-week guided sprint and unlock a verified badge.</p>
+                <button class="btn apply-button btn-outline" type="button">Join Track</button>
+              </article>
+              <article class="feed-card harvest-card" data-type="jobs">
+                <h3>Remote AI Content Strategist</h3>
+                <p>Match score 92% · Paid pilot project · Immediate start.</p>
+                <button class="btn apply-button btn-primary" type="button">Apply Now</button>
+              </article>
+              <article class="feed-card harvest-card" data-type="projects">
+                <h3>Skill-to-Project Challenge</h3>
+                <p>Build one portfolio-ready case study with peer feedback.</p>
+                <button class="btn apply-button btn-outline" type="button">Start Challenge</button>
+              </article>
+              <article class="feed-card harvest-card" data-type="mentors">
+                <h3>Mentor Office Hour</h3>
+                <p>Book a 20-min review with hiring managers and senior freelancers.</p>
+                <button class="btn apply-button btn-outline" type="button">Book Slot</button>
+              </article>
+            </section>
+
+            <div id="feedList">
+              <article class="feed-card post-card">
+                <div class="post-head">
+                  <div class="avatar-mini">S</div>
+                  <div>
+                    <h3>Sarah Chen <span>· Follow</span></h3>
+                    <p>Senior UX Designer at Google • 2h ago</p>
+                  </div>
+                </div>
+                <p>Excited to share that we're hiring 3 UX designers for our AI products team! Remote-friendly and competitive salary.</p>
+                <p class="post-tags">#Hiring #UXDesign #AI #GoogleJobs</p>
+                <div class="post-actions"><span><i class="fa-regular fa-heart"></i> 142</span><span><i class="fa-regular fa-comment"></i> 28</span><span><i class="fa-solid fa-share-nodes"></i> 15</span><span><i class="fa-regular fa-bookmark"></i> Save</span></div>
+              </article>
+            </div>
+          </div>
+
+          <aside class="feed-right-rail">
+            <article class="feed-card">
+              <h3>Weekly Progress</h3>
+              <ul class="pipeline-list">
+                <li><strong>Skill quests done:</strong> 4</li>
+                <li><strong>Opportunities unlocked:</strong> 7</li>
+                <li><strong>Interviews scheduled:</strong> 2</li>
+              </ul>
+            </article>
+            <article class="feed-card">
+              <h3>Trending Skills</h3>
+              <div class="chip-row">
+                <span class="chip-label">AI Product Design</span>
+                <span class="chip-label">RAG Systems</span>
+                <span class="chip-label">Growth Analytics</span>
+                <span class="chip-label">LLM QA</span>
+              </div>
+            </article>
+            <article class="feed-card">
+              <h3>Recommended Next Step</h3>
+              <p>Complete one skill track and one project challenge to improve your match score this week.</p>
+              <a href="freelancer-dashboard.html" class="btn apply-button btn-primary">Go to Freelancer Workspace</a>
+            </article>
+          </aside>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="feed-dashboard.js"></script>
+    <div class="custom-cursor"></div>
+  </body>
+</html>
