@@ -771,6 +771,28 @@
         </div>
       </section>
 
+      <section class="section container">
+        <div class="card reveal">
+          <h2>Frontend ↔ Backend Connection Demo</h2>
+          <p class="lead">Click to make an async request to <code>http://localhost:3000/api/data</code>.</p>
+          <button onclick="fetchData()" class="btn apply-button btn-primary" type="button">Get Data from Backend</button>
+          <p id="data-output">Data will appear here...</p>
+        </div>
+      </section>
+
+
+      <section class="section container" id="attachments">
+        <div class="card reveal">
+          <h2>Attach These Files</h2>
+          <p class="lead">Upload resumes, portfolios, or certifications to complete your application pack.</p>
+          <form id="fileAttachForm" class="search-form">
+            <input id="candidateFiles" class="search-textbox" type="file" multiple />
+            <button type="submit" class="search-button apply-button">Attach Files</button>
+          </form>
+          <ul id="attachedFilesList" class="project-list"></ul>
+        </div>
+      </section>
+
       <section id="contact" class="section alt">
         <div class="container dual-form-layout">
           <form class="contact-form card glass reveal" id="contactForm">
