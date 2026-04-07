@@ -5,35 +5,17 @@ const feedSearchInput = document.getElementById('feedSearchInput');
 const feedFilterChips = document.querySelectorAll('#feedFilterChips .chip');
 const skillHarvestGrid = document.getElementById('skillHarvestGrid');
 const weeklyProgressList = document.getElementById('weeklyProgressList');
-const trendingSkillsList = document.getElementById('trendingSkillsList');
-const mentorList = document.getElementById('mentorList');
-
 const feedKey = 'autohiree_feed_posts';
 const activeSkillKey = 'autohiree_skill_harvest_items';
 
 const normalize = (value) => value.trim().toLowerCase();
 
 const skillHarvestSeed = [
-  { type: 'skills', title: 'Prompt Engineering Sprint', description: '2-week live cohort with project review and badge unlock.', cta: 'Join Track', tone: 'outline' },
-  { type: 'jobs', title: 'Remote AI Content Strategist', description: 'Match score 92% · Paid pilot role · Immediate onboarding.', cta: 'Apply Now', tone: 'primary' },
-  { type: 'projects', title: 'Skill-to-Project Challenge', description: 'Complete one client-style case study and collect endorsements.', cta: 'Start Challenge', tone: 'outline' },
-  { type: 'mentors', title: 'Mentor Office Hour', description: '20-min portfolio review with hiring managers and top freelancers.', cta: 'Book Slot', tone: 'outline' },
-  { type: 'skills', title: 'RAG Fundamentals Path', description: 'Hands-on retrieval pipeline exercises with checkpoint scoring.', cta: 'Start Learning', tone: 'outline' },
-  { type: 'jobs', title: 'Freelance AI QA Tester', description: 'Contract role · Async collaboration · 88% fit.', cta: 'Apply Now', tone: 'primary' },
+  { type: 'all', title: 'Remote AI Content Strategist', description: 'Live top match · 92% fit · Paid pilot role · Immediate onboarding.', cta: 'Apply Now', tone: 'primary' },
 ];
 
 const weeklyProgressSeed = [
-  'Skill quests done: 4',
-  'Opportunities unlocked: 7',
-  'Interviews scheduled: 2',
-];
-
-const trendingSkillsSeed = ['AI Product Design', 'RAG Systems', 'Growth Analytics', 'LLM QA', 'Prompt Ops'];
-
-const mentorSeed = [
-  'Nina Brooks — Product Mentor (4.9 ★)',
-  'Omar Patel — Growth Mentor (4.8 ★)',
-  'Lia Gomez — UX Mentor (5.0 ★)',
+  'Top live activity: 1 high-priority opportunity',
 ];
 
 const createPostCard = (text, createdAtLabel) => {
@@ -77,23 +59,6 @@ const renderRailLists = () => {
       const [label, value] = entry.split(':');
       li.innerHTML = `<strong>${label}:</strong>${value}`;
       weeklyProgressList.appendChild(li);
-    });
-  }
-
-  if (trendingSkillsList) {
-    trendingSkillsSeed.forEach((skill) => {
-      const span = document.createElement('span');
-      span.className = 'chip-label';
-      span.textContent = skill;
-      trendingSkillsList.appendChild(span);
-    });
-  }
-
-  if (mentorList) {
-    mentorSeed.forEach((mentor) => {
-      const li = document.createElement('li');
-      li.textContent = mentor;
-      mentorList.appendChild(li);
     });
   }
 };
