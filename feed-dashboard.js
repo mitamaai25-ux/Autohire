@@ -5,6 +5,7 @@ const feedSearchInput = document.getElementById('feedSearchInput');
 const feedFilterChips = document.querySelectorAll('#feedFilterChips .chip');
 const skillHarvestGrid = document.getElementById('skillHarvestGrid');
 const weeklyProgressList = document.getElementById('weeklyProgressList');
+
 const feedKey = 'autohiree_feed_posts';
 const activeSkillKey = 'autohiree_skill_harvest_items';
 
