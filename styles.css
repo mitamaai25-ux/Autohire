@@ -134,6 +134,8 @@ p { margin: 0; color: var(--muted); }
 .prototype-context span {
   color: #516b88;
 }
+.btn-primary { color: #ffffff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
 
 .search-form {
@@ -165,6 +167,7 @@ p { margin: 0; color: var(--muted); }
   border-radius: 8px;
   cursor: pointer;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .job-card {
   border: 1px solid #8f7ed4;
@@ -173,6 +176,9 @@ p { margin: 0; color: var(--muted); }
   transition: box-shadow 0.3s;
   background: #ffffff;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .job-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
@@ -185,8 +191,6 @@ p { margin: 0; color: var(--muted); }
   padding: 10px 15px;
   border-radius: 6px;
 }
-
-
 
 .lottie-wrap {
   display: grid;
@@ -222,6 +226,10 @@ p { margin: 0; color: var(--muted); }
 .ops-card {
   border-color: #3c5f8d;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
+
 
 .flow-canvas {
   margin-top: 0.7rem;
@@ -248,11 +256,15 @@ p { margin: 0; color: var(--muted); }
   padding: 0.35rem 0.7rem;
   color: #bed3ff;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .talent-list li.active {
   border-color: #70c9ff;
   box-shadow: 0 0 0 2px rgba(96, 213, 255, 0.15);
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .project-pill {
   position: absolute;
@@ -276,6 +288,7 @@ p { margin: 0; color: var(--muted); }
   opacity: 0.4;
   transition: opacity 300ms ease;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .flow-line.active {
   opacity: 1;
@@ -297,6 +310,9 @@ p { margin: 0; color: var(--muted); }
 .ops-fit {
   margin-bottom: 0.8rem;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .match-bar {
   border: 1px solid #3f67a5;
@@ -307,6 +323,7 @@ p { margin: 0; color: var(--muted); }
   align-items: center;
   margin-bottom: 0.8rem;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .match-bar strong {
   color: #6dd5ff;
@@ -322,6 +339,8 @@ p { margin: 0; color: var(--muted); }
   0%, 100% { filter: drop-shadow(0 0 0px rgba(122, 204, 255, 0.2)); }
   50% { filter: drop-shadow(0 0 7px rgba(122, 204, 255, 0.8)); }
 }
+.btn-primary { color: #fff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
 
 .dashboard-tabs {
@@ -347,6 +366,9 @@ p { margin: 0; color: var(--muted); }
   background: linear-gradient(120deg, var(--brand), var(--brand-2));
   color: #1c2e45;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .tab-panels {
   border: 1px solid var(--line);
@@ -370,9 +392,6 @@ p { margin: 0; color: var(--muted); }
   padding-left: 1.1rem;
   color: var(--muted);
 }
-
-
-
 .dashboard-shell {
   background: radial-gradient(circle at 45% 55%, #f1f7ff, #ffffff 72%);
 }
@@ -708,6 +727,7 @@ input, textarea, select {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  color: #5f7288;
 }
 
 .feed-topbar input {
