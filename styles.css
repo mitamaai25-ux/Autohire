@@ -137,7 +137,6 @@ p { margin: 0; color: var(--muted); }
 .btn-primary { color: #ffffff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
 .btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
-
 .search-form {
   display: flex;
   justify-content: space-between;
