@@ -114,6 +114,7 @@ p { margin: 0; color: var(--muted); }
 .hero-panel .btn {
   margin-top: 0.9rem;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .trust-strip {
   margin-top: 1rem;
@@ -257,8 +258,6 @@ p { margin: 0; color: var(--muted); }
   border-radius: 6px;
 }
 
-
-
 .feature-hero {
   display: flex;
   justify-content: space-between;
@@ -282,6 +281,7 @@ p { margin: 0; color: var(--muted); }
   color: #3b82f6;
   margin-bottom: 10px;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .hero-right {
   width: min(360px, 38%);
@@ -295,6 +295,9 @@ p { margin: 0; color: var(--muted); }
   object-fit: cover;
   min-height: 290px;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .live-activity {
   border: 1px solid #d8e5f4;
@@ -387,6 +390,7 @@ p { margin: 0; color: var(--muted); }
   font-weight: 700;
   margin: 0.8rem 0;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .ops-fit {
   margin-bottom: 0.8rem;
@@ -441,6 +445,9 @@ p { margin: 0; color: var(--muted); }
   background: linear-gradient(120deg, var(--brand), var(--brand-2));
   color: #1c2e45;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .tab-panels {
   border: 1px solid var(--line);
@@ -746,6 +753,17 @@ input, textarea, select {
   .freelancer-right {
     grid-template-columns: 1fr;
   }
+
+  .feature-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-left,
+  .hero-right {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 
@@ -848,6 +866,7 @@ input, textarea, select {
   margin: 1.4rem auto;
   display: grid;
   gap: 1rem;
+  color: #5f7288;
 }
 
 .feed-layout {
@@ -893,6 +912,8 @@ input, textarea, select {
   padding: 0.35rem 0.75rem;
   cursor: pointer;
   font: inherit;
+  resize: vertical;
+  color: #2a3a4d;
 }
 
 .chip.active {
