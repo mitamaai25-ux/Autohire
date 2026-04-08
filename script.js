@@ -11,6 +11,32 @@ document.addEventListener('mousemove', (event) => {
   customCursor.style.top = `${event.clientY}px`;
 });
 
+const themeToggle = document.getElementById('themeToggle');
+const rootNode = document.documentElement;
+const themeKey = 'autohiree_theme';
+
+const applyTheme = (theme) => {
+  if (theme === 'dark') {
+    rootNode.setAttribute('data-theme', 'dark');
+    if (themeToggle) themeToggle.textContent = 'Light Mode';
+    return;
+  }
+  rootNode.removeAttribute('data-theme');
+  if (themeToggle) themeToggle.textContent = 'Dark Mode';
+};
+
+const savedTheme = localStorage.getItem(themeKey) || 'light';
+applyTheme(savedTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = rootNode.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem(themeKey, next);
+    applyTheme(next);
+  });
+}
+
 const storageKeys = {
   projects: 'autohiree_admin_projects',
   reservations: 'autohiree_reservations',
