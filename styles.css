@@ -234,6 +234,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   display: grid;
   gap: 0.7rem;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #1f4f96; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .prototype-context {
   border-color: #bfd3ef;
@@ -270,6 +273,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   color: var(--text);
   font: inherit;
 }
+.btn-primary { color: #ffffff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
+
 
 .search-button {
   background-color: #e34216;
@@ -287,6 +293,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
   background: #ffffff;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .job-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
@@ -359,6 +368,7 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
 .ops-card {
   border-color: #3c5f8d;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .flow-canvas {
   margin-top: 0.7rem;
@@ -484,6 +494,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   background: linear-gradient(120deg, var(--brand), var(--brand-2));
   color: #1c2e45;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .tab-panels {
   border: 1px solid var(--line);
@@ -507,8 +520,6 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   padding-left: 1.1rem;
   color: var(--muted);
 }
-
-
 
 .dashboard-shell {
   background: radial-gradient(circle at 45% 55%, #f1f7ff, #ffffff 72%);
@@ -974,6 +985,7 @@ input, textarea, select {
   margin: 1.4rem auto;
   display: grid;
   gap: 1rem;
+  color: #5f7288;
 }
 
 .feed-layout {
@@ -1019,6 +1031,8 @@ input, textarea, select {
   padding: 0.35rem 0.75rem;
   cursor: pointer;
   font: inherit;
+  resize: vertical;
+  color: #2a3a4d;
 }
 
 .chip.active {
