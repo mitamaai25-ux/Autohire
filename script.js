@@ -37,7 +37,6 @@ const storageKeys = {
   projects: 'autohiree_admin_projects',
   reservations: 'autohiree_reservations',
   talentLeads: 'autohiree_talent_leads',
-  attachedFiles: 'autohiree_attached_files',
 };
 
 const reveals = document.querySelectorAll('.reveal');
@@ -198,55 +197,6 @@ if (jobSearchForm && searchBar && jobCards.length) {
     });
   });
 }
-
-
-const fileAttachForm = document.getElementById('fileAttachForm');
-const candidateFiles = document.getElementById('candidateFiles');
-const attachedFilesList = document.getElementById('attachedFilesList');
-
-const renderAttachedFiles = () => {
-  if (!attachedFilesList) return;
-
-  const files = JSON.parse(localStorage.getItem(storageKeys.attachedFiles) || '[]');
-  attachedFilesList.innerHTML = '';
-
-  if (!files.length) {
-    attachedFilesList.innerHTML = '<li class="feature">No files attached yet.</li>';
-    return;
-  }
-
-  files.forEach((file) => {
-    const li = document.createElement('li');
-    li.className = 'case';
-    li.innerHTML = `<p><strong>${file.name}</strong> (${file.size} KB)</p>`;
-    attachedFilesList.appendChild(li);
-  });
-};
-
-if (fileAttachForm && candidateFiles) {
-  fileAttachForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const selected = Array.from(candidateFiles.files || []);
-
-    if (!selected.length) {
-      renderAttachedFiles();
-      return;
-    }
-
-    const existing = JSON.parse(localStorage.getItem(storageKeys.attachedFiles) || '[]');
-    const normalized = selected.map((file) => ({
-      name: file.name,
-      size: Math.max(1, Math.round(file.size / 1024)),
-    }));
-
-    localStorage.setItem(storageKeys.attachedFiles, JSON.stringify([...existing, ...normalized]));
-    fileAttachForm.reset();
-    renderAttachedFiles();
-  });
-}
-
-renderAttachedFiles();
-
 const contactForm = document.getElementById('contactForm');
 const reservationStatus = document.getElementById('reservationStatus');
 if (contactForm) {
