@@ -35,15 +35,10 @@ Open `index.html` directly in your browser.
 3. `freelancer-dashboard.html` or `client-dashboard.html` depending on role.
 4. `admin.html` to review form submissions and manage projects.
 
+## Backend (optional local demo)
+A simple Express backend is included for local API experimentation.
 
-## Frontend + Backend Demo Connection
-A simple Express backend is included for demo API calls from the homepage.
-
-### Start backend
 ```bash
 npm install
 npm start
 ```
-
-Backend endpoint:
-- `GET http://localhost:3000/api/data`

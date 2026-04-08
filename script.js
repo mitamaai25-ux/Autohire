@@ -11,28 +11,6 @@ document.addEventListener('mousemove', (event) => {
   customCursor.style.top = `${event.clientY}px`;
 });
 
-
-async function fetchData() {
-  const output = document.getElementById('data-output');
-
-  try {
-    const response = await fetch('http://localhost:3000/api/data');
-
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    const data = await response.json();
-    console.log(data);
-    if (output) output.textContent = `Message: ${data.message}`;
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    if (output) output.textContent = 'Failed to load data.';
-  }
-}
-
-window.fetchData = fetchData;
-
 const storageKeys = {
   projects: 'autohiree_admin_projects',
   reservations: 'autohiree_reservations',
@@ -108,8 +86,6 @@ if (tabButtons.length && tabPanels.length) {
     });
   });
 }
-
-
 const talentRows = document.querySelectorAll('#talentList li');
 const flowLines = document.querySelectorAll('.flow-line');
 const opsStatus = document.getElementById('opsStatus');
@@ -197,6 +173,8 @@ if (jobSearchForm && searchBar && jobCards.length) {
     });
   });
 }
+
+
 const contactForm = document.getElementById('contactForm');
 const reservationStatus = document.getElementById('reservationStatus');
 if (contactForm) {
