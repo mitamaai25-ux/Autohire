@@ -186,6 +186,8 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   color: #2f4b6d;
   font-size: 0.9rem;
 }
+.btn-primary { color: #ffffff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
 
 .mini-testimonial span {
   display: block;
@@ -222,6 +224,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   border-radius: 0.9rem;
   padding: 0.9rem 1rem;
 }
+.btn-primary { color: #ffffff; background: linear-gradient(120deg, var(--brand), var(--brand-2)); }
+.btn-outline, .btn-ghost { color: var(--text); border-color: var(--line); background: rgba(255, 255, 255, 0.02); }
+
 
 .testimonial-card p {
   font-style: italic;
@@ -276,6 +281,7 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
 .preview-grid span {
   height: 84px;
 }
+.glass { backdrop-filter: blur(6px); }
 
 @keyframes shimmer {
   0% { background-position: 200% 0; }
@@ -291,6 +297,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.9rem;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #1f4f96; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .journey-card {
   border: 1px solid #d8e5f4;
@@ -365,9 +374,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   padding: 10px 15px;
   border-radius: 6px;
 }
-
-
-
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 .feature-hero {
   display: flex;
   justify-content: space-between;
@@ -564,8 +573,10 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   box-shadow: none;
 }
 
-.tab-panel.active {
-  display: block;
+.feed-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
 }
 
 .tab-panel ul {
