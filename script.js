@@ -197,8 +197,6 @@ if (jobSearchForm && searchBar && jobCards.length) {
     });
   });
 }
-
-
 const contactForm = document.getElementById('contactForm');
 const reservationStatus = document.getElementById('reservationStatus');
 if (contactForm) {
