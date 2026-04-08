@@ -88,10 +88,8 @@ const applyHarvestFilter = (filter) => {
  };
 
 const initializeHarvestData = () => {
-  const existing = JSON.parse(localStorage.getItem(activeSkillKey) || 'null');
-  const data = Array.isArray(existing) && existing.length ? existing : skillHarvestSeed;
-  if (!existing) localStorage.setItem(activeSkillKey, JSON.stringify(skillHarvestSeed));
-  renderSkillHarvest(data);
+  localStorage.setItem(activeSkillKey, JSON.stringify(skillHarvestSeed));
+  renderSkillHarvest(skillHarvestSeed);
 };
 
 initializeHarvestData();
