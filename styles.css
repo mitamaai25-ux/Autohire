@@ -310,6 +310,7 @@ p { margin: 0; color: var(--muted); }
   object-fit: cover;
   min-height: 290px;
 }
+.glass { backdrop-filter: blur(6px); }
 
 .live-activity {
   border: 1px solid #d8e5f4;
@@ -456,6 +457,9 @@ p { margin: 0; color: var(--muted); }
   background: linear-gradient(120deg, var(--brand), var(--brand-2));
   color: #1c2e45;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #dfe6ff; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .tab-panels {
   border: 1px solid var(--line);
@@ -740,6 +744,35 @@ input, textarea, select {
   .hero-layout {
     grid-template-columns: 1fr;
   }
+
+  .freelancer-right {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-left,
+  .hero-right {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0ff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  box-shadow: 0 0 10px #0ff;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  z-index: 9999;
 }
 
 @media (max-width: 1240px) {
@@ -863,6 +896,7 @@ input, textarea, select {
   margin: 1.4rem auto;
   display: grid;
   gap: 1rem;
+  color: #5f7288;
 }
 
 .feed-layout {
@@ -908,6 +942,8 @@ input, textarea, select {
   padding: 0.35rem 0.75rem;
   cursor: pointer;
   font: inherit;
+  resize: vertical;
+  color: #2a3a4d;
 }
 
 .chip.active {
