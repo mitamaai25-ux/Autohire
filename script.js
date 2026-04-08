@@ -120,6 +120,7 @@ if (opsStatus && opsFit && opsScore && talentRows.length && flowLines.length) {
   applyUpdate();
   setInterval(applyUpdate, 2600);
 }
+
 const feedItems = [
   'NovaCloud hired a Senior DevOps Engineer in 36 hours using AI shortlisting.',
   'DesignHub posted a project: Product Designer for Fintech onboarding revamp.',
