@@ -24,6 +24,14 @@ AutoHiree is a professional AI-built website concept that combines the best expe
 - Talent profile showcase section.
 - Admin-managed project sync on the homepage.
 
+## Design System (current baseline)
+- **Primary:** `#1F6FEB` (main actions, links, highlights)
+- **Secondary:** `#0A8F8B` (supportive gradients and secondary emphasis)
+- **Accent:** `#F97316` (high-attention moments like alerts/promos)
+- **Text contrast:** main text `#102238`, muted text `#445A74`
+- **Spacing system:** 8px grid (`0.5rem`, `1rem`, `1.5rem`, `2rem`, ...)
+- **Typography scale:** responsive heading tokens (`--fs-h1`, `--fs-h2`) and readable body/lead sizes
+
 ## Run locally
 Open `index.html` directly in your browser.
 
