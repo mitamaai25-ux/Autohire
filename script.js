@@ -86,8 +86,6 @@ if (tabButtons.length && tabPanels.length) {
     });
   });
 }
-
-
 const talentRows = document.querySelectorAll('#talentList li');
 const flowLines = document.querySelectorAll('.flow-line');
 const opsStatus = document.getElementById('opsStatus');
