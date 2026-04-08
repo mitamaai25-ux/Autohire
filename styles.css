@@ -205,6 +205,17 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   padding: 0.9rem 1rem;
 }
 
+.testimonial-card p {
+  font-style: italic;
+  color: #2f4b6d;
+}
+
+.testimonial-card strong {
+  display: block;
+  margin-top: 0.6rem;
+  color: #193f6d;
+}
+
 .prototype-map {
   border-color: #c7d8f0;
 }
@@ -223,6 +234,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   display: grid;
   gap: 0.7rem;
 }
+.counters li { background: var(--surface); border: 1px solid var(--line); border-radius: 0.9rem; padding: 0.95rem; }
+.counters strong { display: block; font-size: 1.5rem; color: #1f4f96; }
+.counters span { color: var(--muted); font-size: 0.9rem; }
 
 .prototype-context {
   border-color: #bfd3ef;
@@ -294,6 +308,9 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   padding: 10px 15px;
   border-radius: 6px;
 }
+
+
+
 .feature-hero {
   display: flex;
   justify-content: space-between;
@@ -503,8 +520,6 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   padding-left: 1.1rem;
   color: var(--muted);
 }
-
-
 
 .dashboard-shell {
   background: radial-gradient(circle at 45% 55%, #f1f7ff, #ffffff 72%);
