@@ -294,9 +294,6 @@ p { margin: 0; color: var(--muted); font-size: var(--fs-body); }
   padding: 10px 15px;
   border-radius: 6px;
 }
-
-
-
 .feature-hero {
   display: flex;
   justify-content: space-between;
@@ -744,6 +741,16 @@ input, textarea, select {
 .reservation-status { margin-top: 0.8rem; color: #d8e1ff; }
 
 @media (max-width: 920px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
   .network-layout,
   .dual-form-layout,
   .dashboard-tabs,
@@ -766,6 +773,79 @@ input, textarea, select {
 
   .hero-layout {
     grid-template-columns: 1fr;
+  }
+
+  .feature-hero {
+    padding: 1.3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    cursor: auto;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+
+  .hero {
+    padding: var(--space-2) 0 var(--space-4);
+  }
+
+  .hero-content {
+    margin-top: var(--space-3);
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+  }
+
+  h2 {
+    font-size: clamp(1.3rem, 6vw, 1.75rem);
+  }
+
+  .btn,
+  .apply-btn,
+  .search-button {
+    min-height: 44px;
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .journey-grid,
+  .job-grid,
+  .profile-grid,
+  .counters {
+    grid-template-columns: 1fr;
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .trust-logos span {
+    font-size: 0.74rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
