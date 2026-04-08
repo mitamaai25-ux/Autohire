@@ -86,6 +86,8 @@ if (tabButtons.length && tabPanels.length) {
     });
   });
 }
+
+
 const talentRows = document.querySelectorAll('#talentList li');
 const flowLines = document.querySelectorAll('.flow-line');
 const opsStatus = document.getElementById('opsStatus');
@@ -118,7 +120,6 @@ if (opsStatus && opsFit && opsScore && talentRows.length && flowLines.length) {
   applyUpdate();
   setInterval(applyUpdate, 2600);
 }
-
 const feedItems = [
   'NovaCloud hired a Senior DevOps Engineer in 36 hours using AI shortlisting.',
   'DesignHub posted a project: Product Designer for Fintech onboarding revamp.',
@@ -174,54 +175,6 @@ if (jobSearchForm && searchBar && jobCards.length) {
   });
 }
 
-
-const contactForm = document.getElementById('contactForm');
-const reservationStatus = document.getElementById('reservationStatus');
-if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const formData = new FormData(contactForm);
-
-    const reservation = {
-      clientName: String(formData.get('company')).trim(),
-      email: String(formData.get('email')).trim().toLowerCase(),
-      service: String(formData.get('service')),
-      brief: String(formData.get('brief')).trim(),
-      createdAt: new Date().toISOString(),
-    };
-
-    const reservations = JSON.parse(localStorage.getItem(storageKeys.reservations) || '[]');
-    reservations.push(reservation);
-    localStorage.setItem(storageKeys.reservations, JSON.stringify(reservations));
-
-    reservationStatus.textContent = 'Success! We saved your hiring request and will send AI-matched talent suggestions.';
-    contactForm.reset();
-  });
-}
-
-const talentApplyForm = document.getElementById('talentApplyForm');
-const talentStatus = document.getElementById('talentStatus');
-if (talentApplyForm) {
-  talentApplyForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const formData = new FormData(talentApplyForm);
-
-    const profile = {
-      name: String(formData.get('name')).trim(),
-      email: String(formData.get('email')).trim().toLowerCase(),
-      role: String(formData.get('role')).trim(),
-      summary: String(formData.get('summary')).trim(),
-      createdAt: new Date().toISOString(),
-    };
-
-    const talentLeads = JSON.parse(localStorage.getItem(storageKeys.talentLeads) || '[]');
-    talentLeads.push(profile);
-    localStorage.setItem(storageKeys.talentLeads, JSON.stringify(talentLeads));
-
-    talentStatus.textContent = 'Profile submitted! Your account is queued for network verification.';
-    talentApplyForm.reset();
-  });
-}
 
 const yearNode = document.getElementById('year');
 if (yearNode) yearNode.textContent = new Date().getFullYear();
